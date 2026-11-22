@@ -7,257 +7,197 @@
 <meta name="description" content="أيام أول — تأجير سيارات كلاسيكية بالساعة في الكويت: شفروليه، مرسيدس بنز، كاديلاك وغيرها. أقل مدة 3 ساعات والتسليم في نفس موقع الاستلام.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Limelight&family=Rakkas&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Rakkas&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --night:#17110d; --night-2:#241a14; --cream:#f3e6c8; --paper:#fbf3df; --ink:#21160f; --ink-soft:#5d4a3c;
-  --mustard:#e8ac2f; --orange:#d9622b; --red:#b3261e; --teal:#237a76; --aqua:#63c2bb;
-  --chrome:linear-gradient(180deg,#fdfdfd 0%,#c9d0d3 22%,#f7f9fa 45%,#8d979c 55%,#dfe4e6 78%,#9aa3a8 100%);
-  --display:"Rakkas","Lalezar","Tajawal",serif;
-  --head:"Lalezar","Tajawal",sans-serif;
-  --latin:"Limelight","Georgia",serif;
+  --cream:#f3ead6; --paper:#fbf6e9; --ink:#2a1c15; --ink-soft:#66544a;
+  --red:#7f2a22; --red-deep:#5f1d18; --teal:#1f5b58; --teal-deep:#143f3d;
+  --gold:#c4922e; --gold-soft:#e3c98f; --rule:rgba(42,28,21,.22);
+  --display:"Rakkas","El Messiri","Tajawal",serif;
+  --head:"El Messiri","Tajawal",sans-serif;
   --body:"Tajawal","Segoe UI",Tahoma,sans-serif;
-  /* ورق جدران ميد-سنتشري */
-  --wallpaper:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cg stroke='%23237a76' stroke-width='2' opacity='.22'%3E%3Cpath d='M40 20v40M20 40h40M26 26l28 28M54 26L26 54'/%3E%3Cpath d='M160 130v36M142 148h36M147 135l26 26M173 135l-26 26'/%3E%3C/g%3E%3Cg fill='%23e8ac2f' opacity='.3'%3E%3Cpath d='M150 30l14 22-14 22-14-22z'/%3E%3Cpath d='M50 138l11 18-11 18-11-18z'/%3E%3C/g%3E%3Cg stroke='%23d9622b' stroke-width='7' opacity='.2'%3E%3Cpath d='M92 96q24-30 44 4'/%3E%3Cpath d='M186 196q20-24 36 2M-34 196q20-24 36 2'/%3E%3C/g%3E%3Cg fill='%23237a76' opacity='.28'%3E%3Ccircle cx='40' cy='40' r='4'/%3E%3Ccircle cx='160' cy='148' r='4'/%3E%3Ccircle cx='100' cy='190' r='3'/%3E%3Ccircle cx='105' cy='18' r='3'/%3E%3Ccircle cx='200' cy='92' r='3'/%3E%3Ccircle cx='10' cy='100' r='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  --shadow:0 14px 34px -18px rgba(42,28,21,.45);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.7}
+body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.75;
+  background-image:radial-gradient(rgba(42,28,21,.05) 1px,transparent 1px);background-size:6px 6px}
 img{max-width:100%;display:block}
 a{color:inherit}
 button,input,select{font:inherit;color:inherit}
-.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
-:focus-visible{outline:3px solid var(--aqua);outline-offset:3px}
-.latin{font-family:var(--latin);direction:ltr;letter-spacing:.14em}
-
-/* ───── عناصر مستوحاة من السيارات ───── */
-.grille{height:26px;background:
-  repeating-linear-gradient(90deg,transparent 0 10px,rgba(23,17,13,.85) 10px 13px),var(--chrome);
-  border-block:3px solid var(--night)}
-.film{height:30px;background:var(--night);
-  background-image:repeating-linear-gradient(90deg,var(--cream) 0 14px,transparent 14px 30px);
-  background-size:auto 10px;background-repeat:repeat-x;background-position:0 50%}
-.tire{width:38px;height:38px;border-radius:50%;flex:none;
-  background:radial-gradient(circle,#dfe4e6 0 18%,#6f787d 19% 24%,var(--mustard) 25% 34%,#fff 35% 62%,var(--night) 63%);
-  box-shadow:0 0 0 2px var(--cream);transition:transform .8s}
-.logo:hover .tire{transform:rotate(-360deg)}
+.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
 /* ───── الشريط العلوي ───── */
-.topbar{background:var(--night);color:var(--cream);position:sticky;top:0;z-index:50;box-shadow:0 3px 0 var(--mustard)}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:9px}
-.logo{font-family:var(--display);font-size:1.9rem;text-decoration:none;display:flex;align-items:center;gap:12px;line-height:1;color:var(--mustard)}
-.nav{display:flex;gap:24px;align-items:center;font-weight:700}
-.nav a{text-decoration:none}
-.nav a:hover{color:var(--mustard)}
-.nav .cta{background:var(--red);color:#fff;padding:5px 18px;border-radius:999px;border:2px solid var(--cream)}
-@media(max-width:720px){.nav a:not(.cta){display:none}}
+.topbar{background:var(--ink);color:var(--cream);position:sticky;top:0;z-index:50;border-bottom:1px solid var(--gold)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.logo{font-family:var(--display);font-size:1.75rem;text-decoration:none;line-height:1;color:var(--gold-soft)}
+.nav{display:flex;gap:28px;align-items:center;font-weight:500;font-size:.98rem}
+.nav a{text-decoration:none;opacity:.88}
+.nav a:hover{color:var(--gold-soft);opacity:1}
+.nav .cta{border:1px solid var(--gold);color:var(--gold-soft);padding:5px 18px;border-radius:3px;opacity:1}
+.nav .cta:hover{background:var(--gold);color:var(--ink)}
+@media(max-width:700px){.nav a:not(.cta){display:none}}
 
-/* ───── الواجهة: سينما السيارات ───── */
-.hero{position:relative;overflow:hidden;color:var(--cream);
-  background:radial-gradient(120% 90% at 50% 105%,#e8782f 0%,#a23a22 30%,#3b1d1a 62%,var(--night) 100%)}
-.hero::before{content:"";position:absolute;inset:0;opacity:.5;
-  background:repeating-conic-gradient(from 0deg at 50% 108%,rgba(255,214,140,.13) 0 5deg,transparent 5deg 10deg)}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center;padding-block:56px 64px}
-@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;text-align:center;padding-block:40px 48px}}
-.marquee{display:inline-block;padding:9px;border-radius:14px;margin-bottom:20px;
-  background:radial-gradient(circle,#fff3c4 0 3.5px,#e8ac2f 4px 5px,transparent 5.5px) 0 0/18px 18px,var(--red);
-  box-shadow:0 0 26px rgba(255,200,90,.45);animation:bulbs 1.6s steps(2) infinite}
-.marquee span{display:block;background:var(--paper);color:var(--ink);border-radius:7px;padding:3px 22px;font-family:var(--head);font-size:1.05rem}
-.marquee .latin{font-size:.72rem;color:var(--red);padding:0;line-height:1.2}
-@keyframes bulbs{50%{box-shadow:0 0 10px rgba(255,200,90,.2);filter:brightness(.9)}}
-.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(4.2rem,11vw,8.4rem);line-height:.95;color:var(--mustard);
-  text-shadow:3px 3px 0 var(--red),7px 7px 0 var(--night)}
-.hero .sub{font-family:var(--head);font-size:clamp(1.3rem,3vw,1.9rem);margin-top:10px;color:var(--paper)}
-.hero p.lead{font-size:1.1rem;max-width:520px;margin:12px 0 22px;font-weight:500;color:#f1dcc0}
-@media(max-width:900px){.hero p.lead{margin-inline:auto}}
-.billing{margin-top:26px;font-size:.8rem;font-weight:700;letter-spacing:.06em;color:#e7c9a2;border-top:1px solid rgba(243,230,200,.35);padding-top:12px;max-width:520px}
-@media(max-width:900px){.billing{margin-inline:auto}}
-.billing b{font-family:var(--head);font-weight:400;font-size:1.02rem;color:var(--cream);letter-spacing:0}
-.btn{display:inline-block;font-family:var(--head);font-size:1.25rem;text-decoration:none;cursor:pointer;line-height:1.5;
-  color:#fff;padding:9px 32px;border-radius:999px;border:0;
-  background:radial-gradient(120% 140% at 30% 15%,#ff7a62 0,var(--red) 45%,#6f120e 100%);
-  box-shadow:0 0 0 3px #e9edef,0 0 0 5px #7e888d,0 6px 0 5px rgba(23,17,13,.55);transition:transform .12s,box-shadow .12s}
-.btn:hover{transform:translateY(2px);box-shadow:0 0 0 3px #e9edef,0 0 0 5px #7e888d,0 4px 0 5px rgba(23,17,13,.55)}
-.btn:active{transform:translateY(6px);box-shadow:0 0 0 3px #e9edef,0 0 0 5px #7e888d,0 0 0 5px rgba(23,17,13,.55)}
-.btn.amber{background:radial-gradient(120% 140% at 30% 15%,#ffe39a 0,var(--mustard) 45%,#a8700f 100%);color:var(--ink)}
-.btn.teal{background:radial-gradient(120% 140% at 30% 15%,#7fd9d1 0,var(--teal) 45%,#0f4441 100%)}
-.hero-btns{display:flex;gap:22px;flex-wrap:wrap}
-@media(max-width:900px){.hero-btns{justify-content:center}}
-.screen{position:relative}
-.screen figure{background:var(--paper);padding:12px 12px 0;border-radius:6px;transform:rotate(-1.5deg);
-  box-shadow:0 0 0 3px var(--night),0 24px 50px rgba(0,0,0,.55)}
-.screen img{width:100%;aspect-ratio:16/9;object-fit:cover;border:3px solid var(--night);background:#3b1d1a}
-.screen figcaption{display:flex;justify-content:space-between;align-items:center;color:var(--ink);padding:6px 4px 8px;font-weight:900;font-size:.85rem}
-.screen figcaption .latin{font-size:.72rem;color:var(--red)}
-.screen::before,.screen::after{content:"";position:absolute;bottom:-64px;width:14px;height:70px;background:var(--chrome);border:2px solid var(--night);z-index:-1}
-.screen::before{inset-inline-start:18%}.screen::after{inset-inline-end:18%}
+/* ───── الواجهة ───── */
+.hero{position:relative;background:var(--red);color:var(--paper)}
+.hero::before{content:"";position:absolute;inset:0;overflow:hidden;
+  background:repeating-conic-gradient(from 0deg at 50% 78%,rgba(255,255,255,.045) 0 6deg,transparent 6deg 12deg)}
+.hero .wrap{position:relative;padding-block:64px 0;text-align:center}
+.ribbon{display:inline-flex;align-items:center;gap:14px;font-family:var(--head);font-weight:500;font-size:.95rem;letter-spacing:.12em;color:var(--gold-soft);margin-bottom:10px}
+.ribbon::before,.ribbon::after{content:"";width:44px;height:1px;background:var(--gold-soft);opacity:.7}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(3.6rem,10vw,7rem);line-height:1.05;color:var(--paper);text-shadow:0 3px 0 var(--red-deep)}
+.hero .tag{font-family:var(--head);font-weight:500;font-size:clamp(1.1rem,2.4vw,1.45rem);color:var(--gold-soft);margin-top:4px}
+.hero p.lead{font-size:1.08rem;max-width:600px;margin:14px auto 26px;color:#f0dfd0}
+.btn{display:inline-block;font-family:var(--head);font-weight:600;font-size:1.08rem;text-decoration:none;cursor:pointer;line-height:1.6;
+  background:var(--gold);color:var(--ink);padding:9px 32px;border:1px solid var(--gold);border-radius:3px;transition:background .15s,color .15s,border-color .15s}
+.btn:hover{background:var(--ink);border-color:var(--ink);color:var(--gold-soft)}
+.btn.alt{background:transparent;border-color:var(--gold-soft);color:var(--paper)}
+.btn.alt:hover{background:var(--paper);border-color:var(--paper);color:var(--ink)}
+.btn.teal{background:var(--teal);border-color:var(--teal);color:var(--paper)}
+.btn.teal:hover{background:var(--teal-deep);border-color:var(--teal-deep);color:var(--paper)}
+.btn.plain{background:transparent;border-color:var(--ink);color:var(--ink)}
+.btn.plain:hover{background:var(--ink);color:var(--paper)}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero-photo{width:min(880px,100%);margin:44px auto -90px;position:relative;background:var(--paper);padding:10px;box-shadow:0 30px 50px -24px rgba(0,0,0,.6)}
+.hero-photo img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:var(--red-deep)}
 
-/* ───── العدّادات ───── */
-.dash{background:var(--night-2);color:var(--cream);padding-block:44px;
-  background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.5px);background-size:7px 7px}
-.dash .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-@media(max-width:820px){.dash .wrap{grid-template-columns:repeat(2,1fr)}}
-.gauge{text-align:center}
-.dial{width:132px;aspect-ratio:1;border-radius:50%;margin:0 auto 12px;padding:7px;background:var(--chrome);box-shadow:0 6px 14px rgba(0,0,0,.5)}
-.dial i{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;position:relative;font-style:normal;
-  background:radial-gradient(circle,var(--night) 0 63%,transparent 64%),
-             repeating-conic-gradient(from -135deg,var(--cream) 0 1.6deg,transparent 1.6deg 15deg),var(--night);
-  box-shadow:inset 0 0 0 3px var(--night)}
-.dial i::after{content:"";position:absolute;inset:auto auto 50% 50%;width:3px;height:40%;background:var(--red);border-radius:3px;
-  transform-origin:50% 100%;transform:translateX(-50%) rotate(var(--n,40deg));opacity:.9}
-.dial b{position:relative;z-index:1;font-family:var(--display);font-weight:400;font-size:2.5rem;color:var(--mustard);line-height:1;
-  background:var(--night);border-radius:50%;width:58%;aspect-ratio:1;display:grid;place-items:center}
-.gauge h3{font-family:var(--head);font-weight:400;font-size:1.3rem;color:var(--mustard)}
-.gauge p{font-size:.93rem;color:#e6d3b4}
+/* ───── الشروط ───── */
+.rules{background:var(--teal);color:var(--paper);padding-top:118px}
+.rules .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.rule{padding:8px 22px 40px;text-align:center;border-inline-start:1px solid rgba(255,255,255,.2)}
+.rule:first-child{border-inline-start:0}
+.rule .big{font-family:var(--display);font-size:2.3rem;color:var(--gold-soft);line-height:1.2}
+.rule h3{font-family:var(--head);font-weight:600;font-size:1.12rem;margin-top:2px}
+.rule p{font-size:.93rem;opacity:.85}
+@media(max-width:820px){.rules .wrap{grid-template-columns:repeat(2,1fr)}.rule:nth-child(3){border-inline-start:0}}
 
 /* ───── الأقسام ───── */
-section{padding-block:76px}
-.papered{background:var(--cream) var(--wallpaper)}
-.sec-head{text-align:center;margin-bottom:36px}
-.kicker{font-size:.8rem;color:var(--red)}
-.sec-head h2{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,7vw,4.2rem);line-height:1.1}
-.sec-head h2::after{content:"✦ ✦ ✦";display:block;font-size:1rem;letter-spacing:.5em;color:var(--orange);margin-top:2px;font-family:var(--body)}
-.sec-head p{max-width:620px;margin:10px auto 0;color:var(--ink-soft);font-weight:500}
+section{padding-block:80px}
+.sec-head{text-align:center;margin-bottom:38px}
+.kicker{font-family:var(--head);font-weight:500;color:var(--red);font-size:.92rem;letter-spacing:.14em}
+.sec-head h2{font-family:var(--display);font-weight:400;font-size:clamp(2.3rem,6vw,3.4rem);line-height:1.2}
+.sec-head h2::after{content:"";display:block;width:64px;height:2px;margin:12px auto 0;background:var(--gold)}
+.sec-head p{max-width:600px;margin:14px auto 0;color:var(--ink-soft)}
+.divider{height:1px;background:var(--rule);width:min(1160px,100% - 32px);margin-inline:auto}
 
 /* ───── الفلاتر ───── */
-.filters{display:grid;gap:14px;margin-bottom:34px}
-.frow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center}
-.frow .lbl{font-family:var(--head);font-size:1.15rem;margin-inline-end:4px}
-.chip{cursor:pointer;background:var(--paper);border:2px solid var(--ink);border-radius:999px;padding:4px 18px;font-weight:700;transition:background .15s,color .15s}
-.chip:hover{background:var(--mustard)}
-.chip[aria-pressed="true"]{background:var(--ink);color:var(--mustard)}
+.filters{display:grid;gap:12px;margin-bottom:34px}
+.frow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:center}
+.frow .lbl{font-family:var(--head);font-weight:600;margin-inline-end:6px}
+.chip{cursor:pointer;background:transparent;border:1px solid var(--rule);border-radius:999px;padding:4px 18px;font-weight:500;font-size:.95rem;transition:all .15s}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--gold-soft)}
 
-/* ───── بطاقات السيارات: ملصقات أفلام ───── */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:34px}
-.card{background:var(--paper);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;position:relative;
-  box-shadow:0 0 0 2px var(--ink),8px 10px 0 rgba(33,22,15,.9);transition:transform .2s}
-.card:hover{transform:translateY(-4px) rotate(-.4deg)}
+/* ───── بطاقات السيارات ───── */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:32px}
+.card{background:var(--paper);border:1px solid var(--rule);box-shadow:var(--shadow);display:flex;flex-direction:column;position:relative;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -20px rgba(42,28,21,.5)}
 .card.hide{display:none}
-.photo{position:relative;background:var(--night);padding-block:16px}
-.photo::before,.photo::after{content:"";position:absolute;inset-inline:0;height:16px;
-  background-image:repeating-linear-gradient(90deg,var(--cream) 0 10px,transparent 10px 22px);background-size:auto 7px;background-repeat:repeat-x;background-position:4px 50%}
-.photo::before{top:0}.photo::after{bottom:0}
-.photo img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;filter:saturate(1.08) contrast(1.04)}
-.photo .ph{aspect-ratio:3/2;display:grid;place-items:center;font-family:var(--display);font-size:2rem;color:var(--mustard);
-  background:repeating-conic-gradient(from 0deg at 50% 100%,rgba(255,255,255,.07) 0 8deg,transparent 8deg 16deg),var(--teal)}
-.plate{position:absolute;top:28px;inset-inline-start:12px;z-index:2;background:#f7f4ea;color:var(--ink);border-radius:5px;
-  padding:0 12px;font-family:var(--latin);font-size:1.15rem;letter-spacing:.08em;line-height:1.5;
-  box-shadow:0 0 0 2px var(--ink),0 0 0 4px #c9d0d3,0 3px 6px rgba(0,0,0,.5)}
-.pick{position:absolute;bottom:28px;inset-inline-end:12px;background:var(--red);color:#fff;font-family:var(--head);
-  padding:0 14px;border-radius:999px;z-index:2;display:none;box-shadow:0 0 0 2px var(--cream)}
+.photo{position:relative;overflow:hidden;background:var(--teal-deep)}
+.photo img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;transition:transform .6s}
+.card:hover .photo img{transform:scale(1.03)}
+.photo .ph{aspect-ratio:3/2;display:grid;place-items:center;font-family:var(--display);font-size:1.8rem;color:var(--gold-soft)}
+.year{position:absolute;top:12px;inset-inline-start:12px;background:var(--paper);color:var(--ink);font-family:var(--head);font-weight:600;font-size:.9rem;letter-spacing:.08em;padding:1px 12px;z-index:2}
+.pick{position:absolute;top:12px;inset-inline-end:12px;background:var(--gold);color:var(--ink);font-family:var(--head);font-weight:600;font-size:.85rem;padding:1px 12px;z-index:2;display:none}
 .card.rec .pick{display:block}
-.card.rec{box-shadow:0 0 0 2px var(--ink),0 0 0 7px var(--mustard),8px 10px 0 6px rgba(33,22,15,.9)}
-.body{padding:16px 20px 20px;display:flex;flex-direction:column;gap:9px;flex:1;text-align:center}
-.brand{font-weight:900;color:var(--red);font-size:.85rem;letter-spacing:.08em}
-.brand::before,.brand::after{content:" ★ ";color:var(--mustard)}
-.card h3{font-family:var(--display);font-weight:400;font-size:2rem;line-height:1.15}
-.card .en{font-family:var(--latin);font-size:.74rem;color:var(--ink-soft);direction:ltr;letter-spacing:.08em}
-.tagline{font-weight:700;color:var(--teal);font-size:1rem}
-.specs{display:flex;gap:6px;flex-wrap:wrap;list-style:none;justify-content:center;font-size:.88rem;font-weight:700;color:var(--ink-soft)}
-.specs li+li::before{content:"· ";color:var(--orange)}
-.stub{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:14px;border-top:2px dashed var(--ink);text-align:start}
-.price{line-height:1.15}
-.price b{font-family:var(--display);font-weight:400;font-size:2.5rem;color:var(--red)}
-.price span{font-weight:900;font-size:.95rem}
-.price .min{display:block;font-size:.8rem;color:var(--ink-soft);font-weight:700}
-.card .btn{font-size:1.05rem;padding:5px 22px}
+.card.rec{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),var(--shadow)}
+.body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.brand{font-family:var(--head);font-weight:600;color:var(--red);font-size:.82rem;letter-spacing:.12em}
+.card h3{font-family:var(--display);font-weight:400;font-size:1.75rem;line-height:1.25}
+.card .en{font-size:.82rem;color:var(--ink-soft);direction:ltr;text-align:right;letter-spacing:.04em}
+.tagline{color:var(--ink-soft);font-size:.97rem}
+.specs{display:flex;gap:6px;flex-wrap:wrap;list-style:none;font-size:.88rem;color:var(--ink-soft)}
+.specs li+li::before{content:"· ";color:var(--gold)}
+.price-row{display:flex;align-items:end;justify-content:space-between;gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid var(--rule)}
+.price{line-height:1.2}
+.price b{font-family:var(--display);font-weight:400;font-size:2.1rem;color:var(--teal-deep)}
+.price span{font-weight:500;font-size:.92rem}
+.price .min{display:block;font-size:.8rem;color:var(--ink-soft)}
+.card .btn{font-size:.98rem;padding:5px 22px}
 
 /* ───── الحجز ───── */
-#booking{background:radial-gradient(90% 60% at 50% 0,#4a2219 0,var(--night) 70%);color:var(--cream)}
-#booking .kicker{color:var(--mustard)}
-#booking .sec-head h2{color:var(--mustard)}
-#booking .sec-head p{color:#e6d3b4}
-.book{display:grid;grid-template-columns:1.25fr .9fr;gap:34px;align-items:start}
+#booking{background:var(--ink);color:var(--paper)}
+#booking .kicker{color:var(--gold-soft)}
+#booking .sec-head p{color:#d9c9ae}
+.book{display:grid;grid-template-columns:1.25fr .9fr;gap:32px;align-items:start}
 @media(max-width:900px){.book{grid-template-columns:1fr}}
-form{background:var(--paper);color:var(--ink);border-radius:10px;padding:26px;display:grid;gap:18px;grid-template-columns:1fr 1fr;
-  box-shadow:0 0 0 3px var(--mustard),0 0 0 6px var(--night),0 0 0 8px #8d979c}
+form{background:var(--paper);color:var(--ink);padding:28px;display:grid;gap:18px;grid-template-columns:1fr 1fr}
 .f{display:grid;gap:6px;align-content:start}
 .f.full{grid-column:1/-1}
 @media(max-width:560px){form{grid-template-columns:1fr;padding:20px}.f{grid-column:1/-1}}
-.f label,.f .label{font-family:var(--head);font-size:1.1rem}
-.f input,.f select{width:100%;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:9px 12px;min-height:46px}
+.f label,.f .label{font-family:var(--head);font-weight:600;font-size:1rem}
+.f input,.f select{width:100%;background:#fff;border:1px solid rgba(42,28,21,.4);border-radius:3px;padding:9px 12px;min-height:46px}
+.f input:focus,.f select:focus{border-color:var(--ink)}
 .f input[type=tel]{direction:ltr;text-align:right}
-.hint{font-size:.85rem;color:var(--ink-soft);font-weight:500}
-.err{font-size:.88rem;color:var(--red);font-weight:700;min-height:1.2em}
-.f.bad input,.f.bad select{border-color:var(--red);background:#fdecea}
-.locked{background:var(--cream);display:flex;align-items:center;gap:8px;font-weight:700;border:2px dashed var(--ink);border-radius:8px;padding:9px 12px;min-height:46px}
-/* عدّاد المسافات */
-.odo{display:flex;align-items:center;justify-content:center;gap:16px;background:var(--night);border-radius:12px;padding:12px;
-  box-shadow:inset 0 0 0 3px #8d979c,inset 0 0 0 5px var(--night)}
-.odo button{width:48px;height:48px;border-radius:50%;border:0;cursor:pointer;font-family:var(--head);font-size:1.7rem;line-height:1;
-  background:var(--chrome);color:var(--ink);box-shadow:0 3px 0 #4d555a}
-.odo button:disabled{opacity:.35;cursor:not-allowed}
-.odo output{display:flex;align-items:center;gap:6px;direction:ltr}
-.odo .d{font-family:var(--latin);font-size:2.2rem;line-height:1;width:44px;padding:8px 0;text-align:center;border-radius:5px;color:var(--paper);
-  background:linear-gradient(#000,#3a302a 48%,#0d0a08 52%,#2a211c);box-shadow:inset 0 0 0 1px #6b5d52}
-.odo .d:nth-child(2){background:linear-gradient(#f7f4ea,#fff 48%,#cfc8b6 52%,#f1ecdd);color:var(--red)}
-.odo .u{font-family:var(--head);color:var(--mustard);font-size:1.2rem;margin-inline-start:8px}
-form .btn{width:100%;text-align:center;font-size:1.4rem}
+.hint{font-size:.85rem;color:var(--ink-soft)}
+.err{font-size:.88rem;color:var(--red);font-weight:500;min-height:1.2em}
+.f.bad input,.f.bad select{border-color:var(--red);background:#fbeeec}
+.stepper{display:flex;align-items:stretch;border:1px solid rgba(42,28,21,.4);border-radius:3px;overflow:hidden;background:#fff;min-height:48px}
+.stepper button{width:56px;border:0;background:var(--cream);font-size:1.5rem;cursor:pointer;line-height:1}
+.stepper button:hover:not(:disabled){background:var(--gold-soft)}
+.stepper button:disabled{color:#b9ab95;cursor:not-allowed}
+.stepper output{flex:1;display:grid;place-items:center;font-family:var(--head);font-weight:700;font-size:1.25rem;border-inline:1px solid rgba(42,28,21,.25)}
+.locked{background:var(--cream);border:1px dashed rgba(42,28,21,.45);border-radius:3px;padding:9px 12px;min-height:46px;display:flex;align-items:center;font-weight:500}
+form .btn{width:100%;text-align:center;font-size:1.15rem;padding-block:11px}
 
-/* تذكرة السينما */
-.ticket{background:var(--mustard);color:var(--ink);border-radius:12px;position:sticky;top:84px;
-  -webkit-mask:radial-gradient(circle 12px at 0 71%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% 71%,transparent 98%,#000) right/51% 100% no-repeat;
-          mask:radial-gradient(circle 12px at 0 71%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% 71%,transparent 98%,#000) right/51% 100% no-repeat}
-.ticket header{padding:16px 24px 10px;text-align:center;border-bottom:3px double var(--ink)}
-.ticket header h3{font-family:var(--display);font-weight:400;font-size:2.1rem;line-height:1.1}
-.ticket header .latin{font-size:.8rem}
-.ticket dl{padding:14px 24px 18px;display:grid;gap:8px}
-.ticket dl div{display:flex;justify-content:space-between;gap:14px;border-bottom:1.5px dotted rgba(33,22,15,.5);padding-bottom:5px}
-.ticket dt{font-weight:700;flex:none}
-.ticket dd{font-weight:900;text-align:left}
-.ticket .total{border-top:3px dashed var(--ink);padding:14px 24px 20px;display:flex;justify-content:space-between;align-items:center}
-.ticket .total>span{font-family:var(--head);font-size:1.3rem}
-.ticket .total b{font-family:var(--display);font-weight:400;font-size:2.7rem;line-height:1;color:var(--red)}
-.ticket .total small{font-size:1rem;font-family:var(--body);font-weight:900;color:var(--ink)}
+.ticket{background:var(--gold-soft);color:var(--ink);position:sticky;top:84px;
+  -webkit-mask:radial-gradient(circle 11px at 0 71%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 11px at 100% 71%,transparent 98%,#000) right/51% 100% no-repeat;
+          mask:radial-gradient(circle 11px at 0 71%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 11px at 100% 71%,transparent 98%,#000) right/51% 100% no-repeat}
+.ticket header{padding:20px 24px 12px;text-align:center;border-bottom:1px solid rgba(42,28,21,.35)}
+.ticket header h3{font-family:var(--display);font-weight:400;font-size:1.9rem;line-height:1.2}
+.ticket header span{font-family:var(--head);font-size:.8rem;letter-spacing:.2em;color:var(--red)}
+.ticket dl{padding:16px 24px 18px;display:grid;gap:9px}
+.ticket dl div{display:flex;justify-content:space-between;gap:14px;border-bottom:1px dotted rgba(42,28,21,.4);padding-bottom:6px}
+.ticket dt{flex:none;color:var(--ink-soft)}
+.ticket dd{font-weight:700;text-align:left}
+.ticket .total{border-top:1px dashed var(--ink);padding:16px 24px 22px;display:flex;justify-content:space-between;align-items:center}
+.ticket .total>span{font-family:var(--head);font-weight:600;font-size:1.15rem}
+.ticket .total b{font-family:var(--display);font-weight:400;font-size:2.4rem;line-height:1;color:var(--red)}
+.ticket .total small{font-size:.95rem;font-family:var(--body);font-weight:700;color:var(--ink)}
 
-/* ───── المشاهد ───── */
-.scenes{display:grid;grid-template-columns:repeat(4,1fr);background:var(--night);padding:30px 0;border-radius:8px;position:relative;box-shadow:8px 10px 0 rgba(33,22,15,.35)}
-.scenes::before,.scenes::after{content:"";position:absolute;inset-inline:0;height:30px;
-  background-image:repeating-linear-gradient(90deg,var(--cream) 0 14px,transparent 14px 30px);background-size:auto 10px;background-repeat:repeat-x;background-position:8px 50%}
-.scenes::before{top:0}.scenes::after{bottom:0}
-.scene{background:var(--paper);margin:0 6px;padding:20px 16px 22px;text-align:center;border-radius:3px}
-.scene:first-child{margin-inline-start:12px}.scene:last-child{margin-inline-end:12px}
-.scene .latin{font-size:.72rem;color:var(--red)}
-.scene h3{font-family:var(--display);font-weight:400;font-size:1.7rem;line-height:1.2}
-.scene p{color:var(--ink-soft);font-weight:500;font-size:.96rem}
-@media(max-width:860px){.scenes{grid-template-columns:repeat(2,1fr);row-gap:12px}.scene{margin:0 6px!important}}
-@media(max-width:460px){.scenes{grid-template-columns:1fr}.scene{margin:0 12px!important}}
+/* ───── كيف نشتغل ───── */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);counter-reset:s;border-block:1px solid var(--rule)}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.steps{grid-template-columns:1fr}}
+.step{padding:30px 24px 32px;border-inline-start:1px solid var(--rule)}
+.step:first-child{border-inline-start:0}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--display);font-size:2.4rem;color:var(--gold);line-height:1;display:block;margin-bottom:8px;direction:ltr;text-align:right}
+.step h3{font-family:var(--head);font-weight:700;font-size:1.2rem}
+.step p{color:var(--ink-soft);font-size:.96rem}
 
 /* ───── الأسئلة ───── */
-.faq{max-width:820px;margin-inline:auto;display:grid;gap:14px}
-details{background:var(--paper);border-radius:10px;box-shadow:0 0 0 2px var(--ink),5px 6px 0 rgba(33,22,15,.9)}
-summary{cursor:pointer;font-family:var(--head);font-size:1.25rem;padding:12px 20px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq{max-width:780px;margin-inline:auto;border-top:1px solid var(--rule)}
+details{border-bottom:1px solid var(--rule)}
+summary{cursor:pointer;font-family:var(--head);font-weight:600;font-size:1.12rem;padding:16px 4px;list-style:none;display:flex;justify-content:space-between;gap:12px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-size:1.6rem;line-height:1;color:var(--red)}
+summary::after{content:"+";font-size:1.4rem;line-height:1.2;color:var(--red);font-family:var(--body)}
 details[open] summary::after{content:"–"}
-details p{padding:0 20px 16px;color:var(--ink-soft);font-weight:500}
+details p{padding:0 4px 18px;color:var(--ink-soft)}
 
-footer{background:var(--night);color:#e6d3b4;text-align:center;padding:46px 0 40px}
-footer .end{font-family:var(--display);font-size:clamp(3rem,9vw,5rem);color:var(--mustard);line-height:1;text-shadow:3px 3px 0 var(--red)}
-footer .latin{font-size:.8rem;color:var(--cream);margin-bottom:14px}
+footer{background:var(--ink);color:#d9c9ae;text-align:center;padding:40px 0}
+footer .logo{font-size:2.1rem;display:block;margin-bottom:6px}
 footer p{font-size:.92rem}
 
-/* ───── نافذة التأكيد ───── */
-dialog{border:0;border-radius:14px;background:var(--paper);color:var(--ink);padding:0;width:min(520px,calc(100% - 28px));margin:auto;
-  box-shadow:0 0 0 3px var(--ink),0 0 0 8px var(--mustard),0 0 0 11px var(--ink)}
-dialog::backdrop{background:rgba(23,17,13,.8)}
-.dlg-head{background:var(--teal);color:#fff;text-align:center;padding:18px;border-bottom:3px solid var(--ink)}
-.dlg-head h3{font-family:var(--display);font-weight:400;font-size:2.3rem;line-height:1.1}
-.dlg-body{padding:20px 24px 26px;display:grid;gap:14px}
-.ref{text-align:center;font-family:var(--latin);font-size:1.4rem;border:3px dashed var(--red);color:var(--red);border-radius:10px;padding:4px;direction:ltr;letter-spacing:.1em}
-.dlg-body ul{list-style:none;display:grid;gap:6px;font-weight:500}
-.dlg-body li b{font-weight:900}
-.dlg-btns{display:flex;gap:20px;flex-wrap:wrap;padding:4px}
-.dlg-btns .btn{flex:1;text-align:center;font-size:1.1rem;padding:7px 14px;min-width:150px}
+dialog{border:0;background:var(--paper);color:var(--ink);padding:0;width:min(500px,calc(100% - 28px));margin:auto;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+dialog::backdrop{background:rgba(42,28,21,.75)}
+.dlg-head{background:var(--teal);color:var(--paper);text-align:center;padding:20px}
+.dlg-head h3{font-family:var(--display);font-weight:400;font-size:2rem;line-height:1.2}
+.dlg-body{padding:22px 26px 26px;display:grid;gap:14px}
+.ref{text-align:center;font-family:var(--head);font-weight:700;font-size:1.3rem;border:1px dashed var(--red);color:var(--red);padding:4px;direction:ltr;letter-spacing:.12em}
+.dlg-body ul{list-style:none;display:grid;gap:6px}
+.dlg-body li b{font-weight:700}
+.dlg-btns{display:flex;gap:12px;flex-wrap:wrap}
+.dlg-btns .btn{flex:1;text-align:center;font-size:1rem;padding:8px 14px;min-width:150px}
 .note{font-size:.85rem;color:var(--ink-soft)}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 
 <div class="topbar">
   <div class="wrap">
-    <a class="logo" href="#top"><span class="tire" aria-hidden="true"></span><span>أيام أول</span></a>
+    <a class="logo" href="#top">أيام أول</a>
     <nav class="nav">
       <a href="#fleet">الأسطول</a>
       <a href="#how">كيف نشتغل</a>
@@ -269,112 +209,72 @@ dialog::backdrop{background:rgba(23,17,13,.8)}
 
 <header class="hero" id="top">
   <div class="wrap">
-    <div>
-      <div class="marquee"><span><span class="latin">NOW SHOWING</span>يُعرض الآن في الكويت</span></div>
-      <h1>أيام أول</h1>
-      <div class="sub">تأجير السيارات الكلاسيكية — بالساعة</div>
-      <p class="lead">شفروليه الخمسينات، مرسيدس الستينات، وكاديلاك بجناحينها. اركب سيارة من أيام أول لزفّتك، تصويرك، أو كشخة على شارع الخليج.</p>
-      <div class="hero-btns">
-        <a class="btn" href="#booking">احجز بالساعة</a>
-        <a class="btn amber" href="#fleet">شوف السيارات</a>
-      </div>
-      <div class="billing">بطولة &nbsp;<b>شفروليه بيل إير</b> · <b>مرسيدس بنز باغودا</b> · <b>كاديلاك إلدورادو</b><br>أقل مدة 3 ساعات · التسليم بنفس موقع الاستلام</div>
+    <div class="ribbon">تأجير السيارات الكلاسيكية · الكويت</div>
+    <h1>أيام أول</h1>
+    <div class="tag">سُوق الزمن الجميل — بالساعة</div>
+    <p class="lead">شفروليه الخمسينات، مرسيدس الستينات، وكاديلاك بجناحينها. سيارات كلاسيكية مرتبة لزفّتك، تصويرك، أو جولة على شارع الخليج.</p>
+    <div class="hero-btns">
+      <a class="btn" href="#booking">احجز بالساعة</a>
+      <a class="btn alt" href="#fleet">شوف السيارات</a>
     </div>
-    <div class="screen">
-      <figure>
-        <img src="images/hero.jpg" alt="شفروليه بيل إير ومرسيدس باغودا على الكورنيش وقت الغروب" onerror="this.style.visibility='hidden'">
-        <figcaption><span>سينما السيارات</span><span class="latin">DRIVE-IN · KUWAIT</span></figcaption>
-      </figure>
-    </div>
+    <div class="hero-photo"><img src="images/hero.jpg" alt="شفروليه بيل إير ومرسيدس باغودا على الكورنيش وقت الغروب" onerror="this.style.visibility='hidden'"></div>
   </div>
 </header>
-<div class="grille" aria-hidden="true"></div>
 
-<div class="dash">
+<div class="rules">
   <div class="wrap">
-    <div class="gauge"><div class="dial"><i style="--n:-95deg"><b>3</b></i></div><h3>ساعات أقل مدة</h3><p>أقل حجز ثلاث ساعات، وتزيد على كيفك.</p></div>
-    <div class="gauge"><div class="dial"><i style="--n:-30deg"><b>⏱</b></i></div><h3>الحساب بالساعة</h3><p>تدفع على عدد الساعات، بدون رسوم مخفية.</p></div>
-    <div class="gauge"><div class="dial"><i style="--n:35deg"><b>⇄</b></i></div><h3>نفس الموقع</h3><p>ترجّع السيارة بنفس الفرع اللي استلمتها منه.</p></div>
-    <div class="gauge"><div class="dial"><i style="--n:110deg"><b>★</b></i></div><h3>سيارات مرتبة</h3><p>مرمّمة، مصبوغة، ومفحوصة قبل كل طلعة.</p></div>
+    <div class="rule"><div class="big">3 ساعات</div><h3>أقل مدة للإيجار</h3><p>أقل حجز ثلاث ساعات، وتزيد على كيفك.</p></div>
+    <div class="rule"><div class="big">بالساعة</div><h3>الحساب على الساعة</h3><p>تدفع على عدد الساعات، بدون رسوم مخفية.</p></div>
+    <div class="rule"><div class="big">نفس الفرع</div><h3>استلام وتسليم</h3><p>ترجّع السيارة بنفس الموقع اللي استلمتها منه.</p></div>
+    <div class="rule"><div class="big">مرتبة</div><h3>سيارات مفحوصة</h3><p>مرمّمة، مصبوغة، ومفحوصة قبل كل طلعة.</p></div>
   </div>
 </div>
-<div class="film" aria-hidden="true"></div>
 
-<section id="fleet" class="papered">
+<section id="fleet">
   <div class="wrap">
     <div class="sec-head">
-      <div class="kicker latin">THE CAST</div>
-      <h2>نجوم العرض</h2>
+      <div class="kicker">الأسطول</div>
+      <h2>اختر سيارتك</h2>
       <p>قول لنا وش المناسبة ونرشّح لك الأنسب، أو تصفّح حسب الماركة.</p>
     </div>
     <div class="filters">
-      <div class="frow" id="occasions" role="group" aria-label="المناسبة"><span class="lbl">وش المناسبة؟</span></div>
+      <div class="frow" id="occasions" role="group" aria-label="المناسبة"><span class="lbl">المناسبة:</span></div>
       <div class="frow" id="brands" role="group" aria-label="الماركة"><span class="lbl">الماركة:</span></div>
     </div>
     <div class="grid" id="grid"></div>
   </div>
 </section>
 
-<div class="grille" aria-hidden="true"></div>
-
 <section id="booking">
   <div class="wrap">
     <div class="sec-head">
-      <div class="kicker latin">BOX OFFICE</div>
-      <h2>شبّاك التذاكر</h2>
-      <p>الإيجار بالساعة وأقل مدة 3 ساعات. تسليم السيارة يكون في نفس الفرع اللي استلمتها منه.</p>
+      <div class="kicker">الحجز</div>
+      <h2>احجز بالساعة</h2>
+      <p>أقل مدة للإيجار 3 ساعات. تسليم السيارة يكون في نفس الفرع اللي استلمتها منه.</p>
     </div>
     <div class="book">
       <form id="form" novalidate>
-        <div class="f full" data-f="car">
-          <label for="car">السيارة</label>
-          <select id="car" required></select>
-          <div class="err"></div>
-        </div>
-        <div class="f" data-f="branch">
-          <label for="branch">فرع الاستلام</label>
-          <select id="branch" required><option value="">اختر الفرع…</option></select>
-          <div class="err"></div>
-        </div>
-        <div class="f">
-          <span class="label">فرع التسليم</span>
-          <div class="locked" id="returnBranch" aria-live="polite">🔒 نفس فرع الاستلام</div>
-          <div class="hint">التسليم دايمًا بنفس موقع الاستلام.</div>
-        </div>
-        <div class="f" data-f="date">
-          <label for="date">تاريخ الاستلام</label>
-          <input type="date" id="date" required>
-          <div class="err"></div>
-        </div>
-        <div class="f" data-f="time">
-          <label for="time">وقت الاستلام</label>
-          <input type="time" id="time" step="900" required>
-          <div class="err"></div>
-        </div>
+        <div class="f full" data-f="car"><label for="car">السيارة</label><select id="car" required></select><div class="err"></div></div>
+        <div class="f" data-f="branch"><label for="branch">فرع الاستلام</label><select id="branch" required><option value="">اختر الفرع…</option></select><div class="err"></div></div>
+        <div class="f"><span class="label">فرع التسليم</span><div class="locked" id="returnBranch" aria-live="polite">نفس فرع الاستلام</div><div class="hint">التسليم دايمًا بنفس موقع الاستلام.</div></div>
+        <div class="f" data-f="date"><label for="date">تاريخ الاستلام</label><input type="date" id="date" required><div class="err"></div></div>
+        <div class="f" data-f="time"><label for="time">وقت الاستلام</label><input type="time" id="time" step="900" required><div class="err"></div></div>
         <div class="f full">
           <span class="label" id="hoursLbl">عدد الساعات</span>
-          <div class="odo" role="group" aria-labelledby="hoursLbl">
-            <button type="button" id="plus" aria-label="زوّد ساعة">+</button>
-            <output id="hoursOut" aria-live="polite"></output>
+          <div class="stepper" role="group" aria-labelledby="hoursLbl">
             <button type="button" id="minus" aria-label="نقّص ساعة">−</button>
+            <output id="hoursOut" aria-live="polite">3 ساعات</output>
+            <button type="button" id="plus" aria-label="زوّد ساعة">+</button>
           </div>
           <div class="hint">أقل مدة 3 ساعات · أقصى مدة 24 ساعة للحجز الواحد.</div>
         </div>
-        <div class="f" data-f="name">
-          <label for="name">الاسم</label>
-          <input type="text" id="name" autocomplete="name" required>
-          <div class="err"></div>
-        </div>
-        <div class="f" data-f="phone">
-          <label for="phone">رقم الهاتف</label>
-          <input type="tel" id="phone" inputmode="numeric" autocomplete="tel-national" placeholder="5XXXXXXX" maxlength="8" required>
-          <div class="err"></div>
-        </div>
-        <div class="f full" style="padding:6px"><button class="btn teal" type="submit">أكّد الحجز</button></div>
+        <div class="f" data-f="name"><label for="name">الاسم</label><input type="text" id="name" autocomplete="name" required><div class="err"></div></div>
+        <div class="f" data-f="phone"><label for="phone">رقم الهاتف</label><input type="tel" id="phone" inputmode="numeric" autocomplete="tel-national" placeholder="5XXXXXXX" maxlength="8" required><div class="err"></div></div>
+        <div class="f full"><button class="btn teal" type="submit">أكّد الحجز</button></div>
       </form>
 
       <aside class="ticket" aria-label="ملخص الحجز">
-        <header><span class="latin">ADMIT ONE</span><h3>تذكرة الطلعة</h3></header>
+        <header><span>ملخص الحجز</span><h3>تذكرة الطلعة</h3></header>
         <dl>
           <div><dt>السيارة</dt><dd id="sCar">—</dd></div>
           <div><dt>سعر الساعة</dt><dd id="sRate">—</dd></div>
@@ -389,25 +289,23 @@ dialog::backdrop{background:rgba(23,17,13,.8)}
   </div>
 </section>
 
-<div class="film" aria-hidden="true"></div>
-
-<section id="how" class="papered">
+<section id="how">
   <div class="wrap">
-    <div class="sec-head"><div class="kicker latin">THE STORY</div><h2>القصة في أربع مشاهد</h2></div>
-    <div class="scenes">
-      <div class="scene"><div class="latin">SCENE 1</div><h3>اختر السيارة</h3><p>تصفّح النجوم واختر اللي تناسب مناسبتك.</p></div>
-      <div class="scene"><div class="latin">SCENE 2</div><h3>حدّد الوقت</h3><p>الفرع والتاريخ وعدد الساعات — من 3 ساعات وفوق.</p></div>
-      <div class="scene"><div class="latin">SCENE 3</div><h3>استلم وانطلق</h3><p>تعال الفرع، نسلّمك السيارة نظيفة ومفحوصة.</p></div>
-      <div class="scene"><div class="latin">SCENE 4</div><h3>رجّعها بنفس الفرع</h3><p>بنهاية المدة ترجّعها لنفس المكان وخلاص.</p></div>
+    <div class="sec-head"><div class="kicker">الطريقة</div><h2>كيف نشتغل</h2></div>
+    <div class="steps">
+      <div class="step"><h3>اختر السيارة</h3><p>تصفّح الأسطول واختر اللي تناسب مناسبتك.</p></div>
+      <div class="step"><h3>حدّد الوقت</h3><p>الفرع والتاريخ وعدد الساعات — من 3 ساعات وفوق.</p></div>
+      <div class="step"><h3>استلم وانطلق</h3><p>تعال الفرع، نسلّمك السيارة نظيفة ومفحوصة.</p></div>
+      <div class="step"><h3>رجّعها بنفس الفرع</h3><p>بنهاية المدة ترجّعها لنفس المكان وخلاص.</p></div>
     </div>
   </div>
 </section>
 
-<div class="grille" aria-hidden="true"></div>
+<div class="divider"></div>
 
-<section id="faq" class="papered">
+<section id="faq">
   <div class="wrap">
-    <div class="sec-head"><div class="kicker latin">Q &amp; A</div><h2>أسئلة متكررة</h2></div>
+    <div class="sec-head"><div class="kicker">استفسارات</div><h2>أسئلة متكررة</h2></div>
     <div class="faq">
       <details open><summary>كم أقل مدة للإيجار؟</summary><p>أقل مدة 3 ساعات. تقدر تزيد ساعات على كيفك، والحساب على كل ساعة.</p></details>
       <details><summary>وين أرجّع السيارة؟</summary><p>التسليم يكون في نفس الفرع اللي استلمت منه السيارة، وما نقدر نستلمها بفرع ثاني.</p></details>
@@ -419,22 +317,21 @@ dialog::backdrop{background:rgba(23,17,13,.8)}
 
 <footer>
   <div class="wrap">
-    <div class="end">النهاية</div>
-    <div class="latin">THE END</div>
-    <p>أيام أول · تأجير السيارات الكلاسيكية بالساعة · الكويت</p>
-    <p class="note" style="color:#bfae90;margin-top:8px">الصور توضيحية.</p>
+    <span class="logo">أيام أول</span>
+    <p>تأجير السيارات الكلاسيكية بالساعة · الكويت</p>
+    <p class="note" style="color:#a8987f;margin-top:8px">الصور توضيحية.</p>
   </div>
 </footer>
 
 <dialog id="dlg" aria-labelledby="dlgTitle">
-  <div class="dlg-head"><h3 id="dlgTitle">تم تسجيل طلبك ✓</h3></div>
+  <div class="dlg-head"><h3 id="dlgTitle">تم تسجيل طلبك</h3></div>
   <div class="dlg-body">
     <div class="ref" id="dRef"></div>
     <ul id="dList"></ul>
     <p class="note">اضغط «أرسل بالواتساب» عشان يوصلنا طلبك ونأكّد لك الحجز.</p>
     <div class="dlg-btns">
       <a class="btn teal" id="dWa" target="_blank" rel="noopener">أرسل بالواتساب</a>
-      <button class="btn amber" type="button" id="dClose">إغلاق</button>
+      <button class="btn plain" type="button" id="dClose">إغلاق</button>
     </div>
   </div>
 </dialog>
@@ -449,10 +346,10 @@ const CONFIG = {
 };
 
 const OCCASIONS = [
-  { id: "wedding", label: "💍 زفّة عرس" },
-  { id: "photo",   label: "📸 جلسة تصوير" },
-  { id: "cruise",  label: "🌊 جولة عالبحر" },
-  { id: "event",   label: "🎩 مناسبة رسمية" }
+  { id: "wedding", label: "زفّة عرس" },
+  { id: "photo",   label: "جلسة تصوير" },
+  { id: "cruise",  label: "جولة عالبحر" },
+  { id: "event",   label: "مناسبة رسمية" }
 ];
 
 /* الأسعار بالدينار الكويتي لكل ساعة — عدّلها على كيفك. الصور في مجلد images */
@@ -483,16 +380,16 @@ function renderCars() {
   grid.innerHTML = CARS.map(c => `
     <article class="card" data-id="${c.id}">
       <div class="photo">
-        <span class="plate">${c.year}</span><span class="pick">★ نرشّحها لك</span>
-        <img src="images/${c.id}.jpg" alt="${esc(c.name)} موديل ${c.year}" loading="lazy" width="720" height="480">
+        <span class="year">${c.year}</span><span class="pick">نرشّحها لك</span>
+        <img src="images/${c.id}.jpg" alt="${esc(c.name)} موديل ${c.year}" loading="lazy" width="1200" height="800">
       </div>
       <div class="body">
         <div class="brand">${esc(c.brand)}</div>
         <h3>${esc(c.name)}</h3>
         <div class="en">${esc(c.en)}</div>
-        <div class="tagline">«${esc(c.tagline)}»</div>
+        <div class="tagline">${esc(c.tagline)}</div>
         <ul class="specs"><li>${c.seats} ركّاب</li><li>${esc(c.gear)}</li><li>${esc(c.body)}</li></ul>
-        <div class="stub">
+        <div class="price-row">
           <div class="price"><b>${kwd(c.rate)}</b> <span>د.ك / ساعة</span>
             <span class="min">أقل حجز ${CONFIG.minHours} ساعات = ${kwd(c.rate * CONFIG.minHours)} د.ك</span></div>
           <button class="btn" type="button" data-book="${c.id}">احجزها</button>
@@ -550,9 +447,7 @@ function startDate() {
 function updateSummary() {
   const c = CARS.find(x => x.id === els.car.value);
   const s = startDate();
-  const [d1, d2] = pad(hours);
-  $("#hoursOut").innerHTML = `<span class="d" aria-hidden="true">${d1}</span><span class="d" aria-hidden="true">${d2}</span><span class="u">${hoursWord(hours).replace(/^\d+ /, "")}</span>`;
-  $("#hoursOut").setAttribute("aria-label", hoursWord(hours));
+  $("#hoursOut").textContent = hoursWord(hours);
   $("#minus").disabled = hours <= CONFIG.minHours;
   $("#plus").disabled = hours >= CONFIG.maxHours;
   $("#sCar").textContent = c ? `${c.name} ${c.year}` : "—";
@@ -562,7 +457,7 @@ function updateSummary() {
   $("#sEnd").textContent = s ? fmt(new Date(s.getTime() + hours * 36e5)) : "—";
   $("#sBranch").textContent = els.branch.value || "—";
   $("#sTotal").textContent = c ? kwd(c.rate * hours) : "0";
-  $("#returnBranch").textContent = els.branch.value ? `🔒 ${els.branch.value}` : "🔒 نفس فرع الاستلام";
+  $("#returnBranch").textContent = els.branch.value ? els.branch.value : "نفس فرع الاستلام";
 }
 function setErr(key, msg) {
   const f = document.querySelector(`[data-f="${key}"]`);
