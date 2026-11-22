@@ -3,227 +3,261 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>أيام زمان | تأجير السيارات الكلاسيكية في الكويت</title>
-<meta name="description" content="تأجير سيارات كلاسيكية بالساعة في الكويت — شفروليه، مرسيدس بنز، كاديلاك وغيرها. أقل مدة 3 ساعات والتسليم في نفس موقع الاستلام.">
+<title>أيام أول | تأجير السيارات الكلاسيكية في الكويت</title>
+<meta name="description" content="أيام أول — تأجير سيارات كلاسيكية بالساعة في الكويت: شفروليه، مرسيدس بنز، كاديلاك وغيرها. أقل مدة 3 ساعات والتسليم في نفس موقع الاستلام.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Rakkas&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Limelight&family=Rakkas&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --cream:#f4e8cf; --paper:#fbf4e2; --ink:#2a1c15; --ink-soft:#5b463a;
-  --red:#9a2f24; --red-deep:#7a2119; --teal:#1d6b67; --teal-deep:#124b48;
-  --mustard:#e2a72a; --line:#2a1c15;
+  --night:#17110d; --night-2:#241a14; --cream:#f3e6c8; --paper:#fbf3df; --ink:#21160f; --ink-soft:#5d4a3c;
+  --mustard:#e8ac2f; --orange:#d9622b; --red:#b3261e; --teal:#237a76; --aqua:#63c2bb;
+  --chrome:linear-gradient(180deg,#fdfdfd 0%,#c9d0d3 22%,#f7f9fa 45%,#8d979c 55%,#dfe4e6 78%,#9aa3a8 100%);
   --display:"Rakkas","Lalezar","Tajawal",serif;
   --head:"Lalezar","Tajawal",sans-serif;
+  --latin:"Limelight","Georgia",serif;
   --body:"Tajawal","Segoe UI",Tahoma,sans-serif;
-  --shadow:6px 6px 0 var(--ink);
+  /* ورق جدران ميد-سنتشري */
+  --wallpaper:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cg stroke='%23237a76' stroke-width='2' opacity='.22'%3E%3Cpath d='M40 20v40M20 40h40M26 26l28 28M54 26L26 54'/%3E%3Cpath d='M160 130v36M142 148h36M147 135l26 26M173 135l-26 26'/%3E%3C/g%3E%3Cg fill='%23e8ac2f' opacity='.3'%3E%3Cpath d='M150 30l14 22-14 22-14-22z'/%3E%3Cpath d='M50 138l11 18-11 18-11-18z'/%3E%3C/g%3E%3Cg stroke='%23d9622b' stroke-width='7' opacity='.2'%3E%3Cpath d='M92 96q24-30 44 4'/%3E%3Cpath d='M186 196q20-24 36 2M-34 196q20-24 36 2'/%3E%3C/g%3E%3Cg fill='%23237a76' opacity='.28'%3E%3Ccircle cx='40' cy='40' r='4'/%3E%3Ccircle cx='160' cy='148' r='4'/%3E%3Ccircle cx='100' cy='190' r='3'/%3E%3Ccircle cx='105' cy='18' r='3'/%3E%3Ccircle cx='200' cy='92' r='3'/%3E%3Ccircle cx='10' cy='100' r='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.7;
-  background-image:radial-gradient(rgba(42,28,21,.07) 1px,transparent 1px);
-  background-size:5px 5px;
-}
+body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.7}
 img{max-width:100%;display:block}
 a{color:inherit}
 button,input,select{font:inherit;color:inherit}
 .wrap{width:min(1180px,100% - 32px);margin-inline:auto}
-:focus-visible{outline:3px solid var(--mustard);outline-offset:3px}
+:focus-visible{outline:3px solid var(--aqua);outline-offset:3px}
+.latin{font-family:var(--latin);direction:ltr;letter-spacing:.14em}
 
-/* ───── شريط علوي ───── */
-.topbar{background:var(--ink);color:var(--cream);position:sticky;top:0;z-index:50;border-bottom:4px solid var(--mustard)}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
-.logo{font-family:var(--display);font-size:1.7rem;text-decoration:none;display:flex;align-items:center;gap:10px;line-height:1}
-.logo b{color:var(--mustard);font-weight:400}
-.logo svg{width:34px;height:34px;flex:none}
-.nav{display:flex;gap:22px;align-items:center;font-weight:700}
-.nav a{text-decoration:none;opacity:.9}
+/* ───── عناصر مستوحاة من السيارات ───── */
+.grille{height:26px;background:
+  repeating-linear-gradient(90deg,transparent 0 10px,rgba(23,17,13,.85) 10px 13px),var(--chrome);
+  border-block:3px solid var(--night)}
+.film{height:30px;background:var(--night);
+  background-image:repeating-linear-gradient(90deg,var(--cream) 0 14px,transparent 14px 30px);
+  background-size:auto 10px;background-repeat:repeat-x;background-position:0 50%}
+.tire{width:38px;height:38px;border-radius:50%;flex:none;
+  background:radial-gradient(circle,#dfe4e6 0 18%,#6f787d 19% 24%,var(--mustard) 25% 34%,#fff 35% 62%,var(--night) 63%);
+  box-shadow:0 0 0 2px var(--cream);transition:transform .8s}
+.logo:hover .tire{transform:rotate(-360deg)}
+
+/* ───── الشريط العلوي ───── */
+.topbar{background:var(--night);color:var(--cream);position:sticky;top:0;z-index:50;box-shadow:0 3px 0 var(--mustard)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:9px}
+.logo{font-family:var(--display);font-size:1.9rem;text-decoration:none;display:flex;align-items:center;gap:12px;line-height:1;color:var(--mustard)}
+.nav{display:flex;gap:24px;align-items:center;font-weight:700}
+.nav a{text-decoration:none}
 .nav a:hover{color:var(--mustard)}
-.nav .cta{background:var(--mustard);color:var(--ink);padding:6px 16px;border-radius:999px;opacity:1}
-@media(max-width:700px){.nav a:not(.cta){display:none}}
+.nav .cta{background:var(--red);color:#fff;padding:5px 18px;border-radius:999px;border:2px solid var(--cream)}
+@media(max-width:720px){.nav a:not(.cta){display:none}}
 
-/* ───── الواجهة ───── */
-.hero{position:relative;overflow:hidden;background:var(--red);color:var(--paper);border-bottom:6px solid var(--ink)}
-.hero::before{
-  content:"";position:absolute;inset:-60% -30%;
-  background:repeating-conic-gradient(from 0deg at 50% 62%,rgba(255,255,255,.075) 0 7deg,transparent 7deg 14deg);
-}
-.hero .wrap{position:relative;padding-block:64px 0;text-align:center}
-.ribbon{display:inline-block;background:var(--mustard);color:var(--ink);font-family:var(--head);font-size:1.05rem;
-  padding:4px 26px;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);transform:rotate(-2deg);margin-bottom:22px}
-.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(3rem,10vw,7rem);line-height:1.05;
-  text-shadow:4px 4px 0 var(--ink);letter-spacing:0}
-.hero h1 span{color:var(--mustard)}
-.hero p.lead{font-size:clamp(1.05rem,2.4vw,1.35rem);max-width:640px;margin:18px auto 26px;font-weight:500}
-.btn{display:inline-block;font-family:var(--head);font-size:1.25rem;text-decoration:none;cursor:pointer;
-  background:var(--mustard);color:var(--ink);padding:10px 34px;border:3px solid var(--ink);border-radius:10px;
-  box-shadow:5px 5px 0 var(--ink);transition:transform .12s,box-shadow .12s}
-.btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink)}
-.btn:active{transform:translate(5px,5px);box-shadow:0 0 0 var(--ink)}
-.btn.alt{background:var(--paper)}
-.btn.teal{background:var(--teal);color:var(--paper)}
-.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.hero-car{margin:34px auto -6px;width:min(760px,100%)}
-.road{height:26px;background:var(--ink);position:relative}
-.road::after{content:"";position:absolute;inset:11px 0 auto;height:4px;
-  background:repeating-linear-gradient(90deg,var(--mustard) 0 40px,transparent 40px 80px)}
-.checker{height:22px;background:
-  conic-gradient(var(--ink) 25%,var(--paper) 0 50%,var(--ink) 0 75%,var(--paper) 0) 0 0/22px 22px}
+/* ───── الواجهة: سينما السيارات ───── */
+.hero{position:relative;overflow:hidden;color:var(--cream);
+  background:radial-gradient(120% 90% at 50% 105%,#e8782f 0%,#a23a22 30%,#3b1d1a 62%,var(--night) 100%)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.5;
+  background:repeating-conic-gradient(from 0deg at 50% 108%,rgba(255,214,140,.13) 0 5deg,transparent 5deg 10deg)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center;padding-block:56px 64px}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;text-align:center;padding-block:40px 48px}}
+.marquee{display:inline-block;padding:9px;border-radius:14px;margin-bottom:20px;
+  background:radial-gradient(circle,#fff3c4 0 3.5px,#e8ac2f 4px 5px,transparent 5.5px) 0 0/18px 18px,var(--red);
+  box-shadow:0 0 26px rgba(255,200,90,.45);animation:bulbs 1.6s steps(2) infinite}
+.marquee span{display:block;background:var(--paper);color:var(--ink);border-radius:7px;padding:3px 22px;font-family:var(--head);font-size:1.05rem}
+.marquee .latin{font-size:.72rem;color:var(--red);padding:0;line-height:1.2}
+@keyframes bulbs{50%{box-shadow:0 0 10px rgba(255,200,90,.2);filter:brightness(.9)}}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(4.2rem,11vw,8.4rem);line-height:.95;color:var(--mustard);
+  text-shadow:3px 3px 0 var(--red),7px 7px 0 var(--night)}
+.hero .sub{font-family:var(--head);font-size:clamp(1.3rem,3vw,1.9rem);margin-top:10px;color:var(--paper)}
+.hero p.lead{font-size:1.1rem;max-width:520px;margin:12px 0 22px;font-weight:500;color:#f1dcc0}
+@media(max-width:900px){.hero p.lead{margin-inline:auto}}
+.billing{margin-top:26px;font-size:.8rem;font-weight:700;letter-spacing:.06em;color:#e7c9a2;border-top:1px solid rgba(243,230,200,.35);padding-top:12px;max-width:520px}
+@media(max-width:900px){.billing{margin-inline:auto}}
+.billing b{font-family:var(--head);font-weight:400;font-size:1.02rem;color:var(--cream);letter-spacing:0}
+.btn{display:inline-block;font-family:var(--head);font-size:1.25rem;text-decoration:none;cursor:pointer;line-height:1.5;
+  color:#fff;padding:9px 32px;border-radius:999px;border:0;
+  background:radial-gradient(120% 140% at 30% 15%,#ff7a62 0,var(--red) 45%,#6f120e 100%);
+  box-shadow:0 0 0 3px #e9edef,0 0 0 5px #7e888d,0 6px 0 5px rgba(23,17,13,.55);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translateY(2px);box-shadow:0 0 0 3px #e9edef,0 0 0 5px #7e888d,0 4px 0 5px rgba(23,17,13,.55)}
+.btn:active{transform:translateY(6px);box-shadow:0 0 0 3px #e9edef,0 0 0 5px #7e888d,0 0 0 5px rgba(23,17,13,.55)}
+.btn.amber{background:radial-gradient(120% 140% at 30% 15%,#ffe39a 0,var(--mustard) 45%,#a8700f 100%);color:var(--ink)}
+.btn.teal{background:radial-gradient(120% 140% at 30% 15%,#7fd9d1 0,var(--teal) 45%,#0f4441 100%)}
+.hero-btns{display:flex;gap:22px;flex-wrap:wrap}
+@media(max-width:900px){.hero-btns{justify-content:center}}
+.screen{position:relative}
+.screen figure{background:var(--paper);padding:12px 12px 0;border-radius:6px;transform:rotate(-1.5deg);
+  box-shadow:0 0 0 3px var(--night),0 24px 50px rgba(0,0,0,.55)}
+.screen img{width:100%;aspect-ratio:16/9;object-fit:cover;border:3px solid var(--night);background:#3b1d1a}
+.screen figcaption{display:flex;justify-content:space-between;align-items:center;color:var(--ink);padding:6px 4px 8px;font-weight:900;font-size:.85rem}
+.screen figcaption .latin{font-size:.72rem;color:var(--red)}
+.screen::before,.screen::after{content:"";position:absolute;bottom:-64px;width:14px;height:70px;background:var(--chrome);border:2px solid var(--night);z-index:-1}
+.screen::before{inset-inline-start:18%}.screen::after{inset-inline-end:18%}
 
-/* ───── الشروط السريعة ───── */
-.rules{background:var(--teal);color:var(--paper);border-bottom:6px solid var(--ink)}
-.rules .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-.rule{padding:26px 18px;text-align:center;border-inline-start:2px dashed rgba(255,255,255,.35)}
-.rule:first-child{border-inline-start:0}
-.rule .big{font-family:var(--display);font-size:2.6rem;color:var(--mustard);line-height:1.1}
-.rule h3{font-family:var(--head);font-weight:400;font-size:1.25rem}
-.rule p{font-size:.95rem;opacity:.92}
-@media(max-width:820px){.rules .wrap{grid-template-columns:repeat(2,1fr)}.rule:nth-child(3){border-inline-start:0}
-  .rule:nth-child(n+3){border-top:2px dashed rgba(255,255,255,.35)}}
+/* ───── العدّادات ───── */
+.dash{background:var(--night-2);color:var(--cream);padding-block:44px;
+  background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.5px);background-size:7px 7px}
+.dash .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+@media(max-width:820px){.dash .wrap{grid-template-columns:repeat(2,1fr)}}
+.gauge{text-align:center}
+.dial{width:132px;aspect-ratio:1;border-radius:50%;margin:0 auto 12px;padding:7px;background:var(--chrome);box-shadow:0 6px 14px rgba(0,0,0,.5)}
+.dial i{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;position:relative;font-style:normal;
+  background:radial-gradient(circle,var(--night) 0 63%,transparent 64%),
+             repeating-conic-gradient(from -135deg,var(--cream) 0 1.6deg,transparent 1.6deg 15deg),var(--night);
+  box-shadow:inset 0 0 0 3px var(--night)}
+.dial i::after{content:"";position:absolute;inset:auto auto 50% 50%;width:3px;height:40%;background:var(--red);border-radius:3px;
+  transform-origin:50% 100%;transform:translateX(-50%) rotate(var(--n,40deg));opacity:.9}
+.dial b{position:relative;z-index:1;font-family:var(--display);font-weight:400;font-size:2.5rem;color:var(--mustard);line-height:1;
+  background:var(--night);border-radius:50%;width:58%;aspect-ratio:1;display:grid;place-items:center}
+.gauge h3{font-family:var(--head);font-weight:400;font-size:1.3rem;color:var(--mustard)}
+.gauge p{font-size:.93rem;color:#e6d3b4}
 
-/* ───── عناوين الأقسام ───── */
-section{padding-block:72px}
-.sec-head{text-align:center;margin-bottom:34px}
-.sec-head .kicker{font-family:var(--head);color:var(--red);font-size:1.1rem;letter-spacing:.02em}
-.sec-head h2{font-family:var(--display);font-weight:400;font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.15}
-.sec-head h2::after{content:"";display:block;width:140px;height:10px;margin:10px auto 0;
-  background:repeating-linear-gradient(90deg,var(--ink) 0 10px,transparent 10px 20px)}
-.sec-head p{max-width:620px;margin:14px auto 0;color:var(--ink-soft);font-weight:500}
+/* ───── الأقسام ───── */
+section{padding-block:76px}
+.papered{background:var(--cream) var(--wallpaper)}
+.sec-head{text-align:center;margin-bottom:36px}
+.kicker{font-size:.8rem;color:var(--red)}
+.sec-head h2{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,7vw,4.2rem);line-height:1.1}
+.sec-head h2::after{content:"✦ ✦ ✦";display:block;font-size:1rem;letter-spacing:.5em;color:var(--orange);margin-top:2px;font-family:var(--body)}
+.sec-head p{max-width:620px;margin:10px auto 0;color:var(--ink-soft);font-weight:500}
 
 /* ───── الفلاتر ───── */
-.filters{display:grid;gap:14px;margin-bottom:30px}
+.filters{display:grid;gap:14px;margin-bottom:34px}
 .frow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center}
-.frow .lbl{font-family:var(--head);font-size:1.1rem;margin-inline-end:4px}
-.chip{cursor:pointer;background:var(--paper);border:2.5px solid var(--ink);border-radius:999px;padding:4px 18px;font-weight:700;
-  box-shadow:3px 3px 0 var(--ink);transition:transform .1s,box-shadow .1s}
-.chip:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--ink)}
+.frow .lbl{font-family:var(--head);font-size:1.15rem;margin-inline-end:4px}
+.chip{cursor:pointer;background:var(--paper);border:2px solid var(--ink);border-radius:999px;padding:4px 18px;font-weight:700;transition:background .15s,color .15s}
+.chip:hover{background:var(--mustard)}
 .chip[aria-pressed="true"]{background:var(--ink);color:var(--mustard)}
 
-/* ───── بطاقات السيارات ───── */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:30px}
-.card{background:var(--paper);border:3px solid var(--ink);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;
-  display:flex;flex-direction:column;position:relative}
+/* ───── بطاقات السيارات: ملصقات أفلام ───── */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:34px}
+.card{background:var(--paper);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;position:relative;
+  box-shadow:0 0 0 2px var(--ink),8px 10px 0 rgba(33,22,15,.9);transition:transform .2s}
+.card:hover{transform:translateY(-4px) rotate(-.4deg)}
 .card.hide{display:none}
-.photo{position:relative;aspect-ratio:3/2;background:var(--teal-deep);border-bottom:3px solid var(--ink);overflow:hidden}
-.photo img{width:100%;height:100%;object-fit:cover;filter:sepia(.28) saturate(1.05) contrast(1.04);transition:filter .3s,transform .5s}
-.card:hover .photo img{filter:none;transform:scale(1.04)}
-.photo .ph{position:absolute;inset:0;display:grid;place-items:center;
-  background:repeating-conic-gradient(from 0deg at 50% 100%,rgba(255,255,255,.08) 0 8deg,transparent 8deg 16deg),var(--teal)}
-.photo .ph svg{width:78%}
-.year{position:absolute;top:12px;inset-inline-start:12px;background:var(--mustard);border:2.5px solid var(--ink);
-  font-family:var(--head);font-size:1.15rem;padding:0 12px;border-radius:6px;transform:rotate(3deg);z-index:2}
-.pick{position:absolute;top:12px;inset-inline-end:12px;background:var(--red);color:var(--paper);border:2.5px solid var(--ink);
-  font-family:var(--head);padding:0 12px;border-radius:6px;transform:rotate(-3deg);z-index:2;display:none}
+.photo{position:relative;background:var(--night);padding-block:16px}
+.photo::before,.photo::after{content:"";position:absolute;inset-inline:0;height:16px;
+  background-image:repeating-linear-gradient(90deg,var(--cream) 0 10px,transparent 10px 22px);background-size:auto 7px;background-repeat:repeat-x;background-position:4px 50%}
+.photo::before{top:0}.photo::after{bottom:0}
+.photo img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;filter:saturate(1.08) contrast(1.04)}
+.photo .ph{aspect-ratio:3/2;display:grid;place-items:center;font-family:var(--display);font-size:2rem;color:var(--mustard);
+  background:repeating-conic-gradient(from 0deg at 50% 100%,rgba(255,255,255,.07) 0 8deg,transparent 8deg 16deg),var(--teal)}
+.plate{position:absolute;top:28px;inset-inline-start:12px;z-index:2;background:#f7f4ea;color:var(--ink);border-radius:5px;
+  padding:0 12px;font-family:var(--latin);font-size:1.15rem;letter-spacing:.08em;line-height:1.5;
+  box-shadow:0 0 0 2px var(--ink),0 0 0 4px #c9d0d3,0 3px 6px rgba(0,0,0,.5)}
+.pick{position:absolute;bottom:28px;inset-inline-end:12px;background:var(--red);color:#fff;font-family:var(--head);
+  padding:0 14px;border-radius:999px;z-index:2;display:none;box-shadow:0 0 0 2px var(--cream)}
 .card.rec .pick{display:block}
-.card.rec{outline:4px solid var(--mustard);outline-offset:3px}
-.body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
-.brand{font-weight:900;color:var(--red);font-size:.9rem;letter-spacing:.03em}
-.card h3{font-family:var(--head);font-weight:400;font-size:1.65rem;line-height:1.2}
-.card .en{font-size:.85rem;color:var(--ink-soft);direction:ltr;text-align:right;font-weight:500}
-.specs{display:flex;gap:8px;flex-wrap:wrap;list-style:none}
-.specs li{border:2px solid var(--ink);border-radius:6px;padding:0 10px;font-size:.88rem;font-weight:700;background:var(--cream)}
-.price-row{display:flex;align-items:end;justify-content:space-between;gap:10px;margin-top:auto;padding-top:12px;border-top:2px dashed var(--ink)}
-.price{line-height:1.1}
-.price b{font-family:var(--display);font-weight:400;font-size:2.3rem;color:var(--teal-deep)}
-.price small{display:block;font-weight:700;color:var(--ink-soft)}
-.price .min{font-size:.82rem;color:var(--red);font-weight:700}
-.card .btn{font-size:1.05rem;padding:6px 20px;box-shadow:4px 4px 0 var(--ink)}
-.credit{font-size:.68rem;color:var(--ink-soft);direction:ltr;text-align:left;opacity:.8}
-.credit a{text-decoration:underline dotted}
+.card.rec{box-shadow:0 0 0 2px var(--ink),0 0 0 7px var(--mustard),8px 10px 0 6px rgba(33,22,15,.9)}
+.body{padding:16px 20px 20px;display:flex;flex-direction:column;gap:9px;flex:1;text-align:center}
+.brand{font-weight:900;color:var(--red);font-size:.85rem;letter-spacing:.08em}
+.brand::before,.brand::after{content:" ★ ";color:var(--mustard)}
+.card h3{font-family:var(--display);font-weight:400;font-size:2rem;line-height:1.15}
+.card .en{font-family:var(--latin);font-size:.74rem;color:var(--ink-soft);direction:ltr;letter-spacing:.08em}
+.tagline{font-weight:700;color:var(--teal);font-size:1rem}
+.specs{display:flex;gap:6px;flex-wrap:wrap;list-style:none;justify-content:center;font-size:.88rem;font-weight:700;color:var(--ink-soft)}
+.specs li+li::before{content:"· ";color:var(--orange)}
+.stub{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:14px;border-top:2px dashed var(--ink);text-align:start}
+.price{line-height:1.15}
+.price b{font-family:var(--display);font-weight:400;font-size:2.5rem;color:var(--red)}
+.price span{font-weight:900;font-size:.95rem}
+.price .min{display:block;font-size:.8rem;color:var(--ink-soft);font-weight:700}
+.card .btn{font-size:1.05rem;padding:5px 22px}
 
 /* ───── الحجز ───── */
-#booking{background:var(--ink);color:var(--paper);border-block:6px solid var(--mustard)}
-#booking .sec-head .kicker{color:var(--mustard)}
-#booking .sec-head h2::after{background:repeating-linear-gradient(90deg,var(--mustard) 0 10px,transparent 10px 20px)}
-#booking .sec-head p{color:#e6d6b8}
-.book{display:grid;grid-template-columns:1.25fr .9fr;gap:30px;align-items:start}
+#booking{background:radial-gradient(90% 60% at 50% 0,#4a2219 0,var(--night) 70%);color:var(--cream)}
+#booking .kicker{color:var(--mustard)}
+#booking .sec-head h2{color:var(--mustard)}
+#booking .sec-head p{color:#e6d3b4}
+.book{display:grid;grid-template-columns:1.25fr .9fr;gap:34px;align-items:start}
 @media(max-width:900px){.book{grid-template-columns:1fr}}
-form{background:var(--paper);color:var(--ink);border:3px solid var(--mustard);border-radius:14px;padding:26px;display:grid;gap:18px;
-  grid-template-columns:1fr 1fr}
-.f{display:grid;gap:6px}
+form{background:var(--paper);color:var(--ink);border-radius:10px;padding:26px;display:grid;gap:18px;grid-template-columns:1fr 1fr;
+  box-shadow:0 0 0 3px var(--mustard),0 0 0 6px var(--night),0 0 0 8px #8d979c}
+.f{display:grid;gap:6px;align-content:start}
 .f.full{grid-column:1/-1}
 @media(max-width:560px){form{grid-template-columns:1fr;padding:20px}.f{grid-column:1/-1}}
 .f label,.f .label{font-family:var(--head);font-size:1.1rem}
-.f input,.f select{width:100%;background:#fff;border:2.5px solid var(--ink);border-radius:8px;padding:9px 12px;min-height:46px}
+.f input,.f select{width:100%;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:9px 12px;min-height:46px}
 .f input[type=tel]{direction:ltr;text-align:right}
 .hint{font-size:.85rem;color:var(--ink-soft);font-weight:500}
 .err{font-size:.88rem;color:var(--red);font-weight:700;min-height:1.2em}
-.f.bad input,.f.bad select{border-color:var(--red);background:#fdeceA}
-.stepper{display:flex;align-items:stretch;border:2.5px solid var(--ink);border-radius:8px;overflow:hidden;background:#fff;min-height:46px}
-.stepper button{width:52px;border:0;background:var(--mustard);font-family:var(--head);font-size:1.6rem;cursor:pointer;line-height:1}
-.stepper button:disabled{background:#d9cdb3;color:#9b8c74;cursor:not-allowed}
-.stepper output{flex:1;display:grid;place-items:center;font-family:var(--head);font-size:1.35rem;border-inline:2.5px solid var(--ink)}
-.locked{background:var(--cream)!important;border-style:dashed!important;display:flex;align-items:center;gap:8px;font-weight:700;
-  border:2.5px dashed var(--ink);border-radius:8px;padding:9px 12px;min-height:46px}
+.f.bad input,.f.bad select{border-color:var(--red);background:#fdecea}
+.locked{background:var(--cream);display:flex;align-items:center;gap:8px;font-weight:700;border:2px dashed var(--ink);border-radius:8px;padding:9px 12px;min-height:46px}
+/* عدّاد المسافات */
+.odo{display:flex;align-items:center;justify-content:center;gap:16px;background:var(--night);border-radius:12px;padding:12px;
+  box-shadow:inset 0 0 0 3px #8d979c,inset 0 0 0 5px var(--night)}
+.odo button{width:48px;height:48px;border-radius:50%;border:0;cursor:pointer;font-family:var(--head);font-size:1.7rem;line-height:1;
+  background:var(--chrome);color:var(--ink);box-shadow:0 3px 0 #4d555a}
+.odo button:disabled{opacity:.35;cursor:not-allowed}
+.odo output{display:flex;align-items:center;gap:6px;direction:ltr}
+.odo .d{font-family:var(--latin);font-size:2.2rem;line-height:1;width:44px;padding:8px 0;text-align:center;border-radius:5px;color:var(--paper);
+  background:linear-gradient(#000,#3a302a 48%,#0d0a08 52%,#2a211c);box-shadow:inset 0 0 0 1px #6b5d52}
+.odo .d:nth-child(2){background:linear-gradient(#f7f4ea,#fff 48%,#cfc8b6 52%,#f1ecdd);color:var(--red)}
+.odo .u{font-family:var(--head);color:var(--mustard);font-size:1.2rem;margin-inline-start:8px}
 form .btn{width:100%;text-align:center;font-size:1.4rem}
 
-/* تذكرة الملخص */
-.ticket{background:var(--mustard);color:var(--ink);border-radius:14px;position:sticky;top:84px;
-  -webkit-mask:radial-gradient(circle 12px at 0 68%,transparent 98%,#000) left/51% 100% no-repeat,
-               radial-gradient(circle 12px at 100% 68%,transparent 98%,#000) right/51% 100% no-repeat;
-          mask:radial-gradient(circle 12px at 0 68%,transparent 98%,#000) left/51% 100% no-repeat,
-               radial-gradient(circle 12px at 100% 68%,transparent 98%,#000) right/51% 100% no-repeat}
-.ticket header{padding:18px 24px 12px;text-align:center;border-bottom:3px double var(--ink)}
-.ticket header h3{font-family:var(--display);font-weight:400;font-size:2rem;line-height:1.1}
-.ticket header span{font-weight:700;font-size:.9rem;letter-spacing:.2em}
-.ticket dl{padding:16px 24px 20px;display:grid;gap:9px}
-.ticket dl div{display:flex;justify-content:space-between;gap:14px;border-bottom:1.5px dotted rgba(42,28,21,.5);padding-bottom:6px}
+/* تذكرة السينما */
+.ticket{background:var(--mustard);color:var(--ink);border-radius:12px;position:sticky;top:84px;
+  -webkit-mask:radial-gradient(circle 12px at 0 71%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% 71%,transparent 98%,#000) right/51% 100% no-repeat;
+          mask:radial-gradient(circle 12px at 0 71%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% 71%,transparent 98%,#000) right/51% 100% no-repeat}
+.ticket header{padding:16px 24px 10px;text-align:center;border-bottom:3px double var(--ink)}
+.ticket header h3{font-family:var(--display);font-weight:400;font-size:2.1rem;line-height:1.1}
+.ticket header .latin{font-size:.8rem}
+.ticket dl{padding:14px 24px 18px;display:grid;gap:8px}
+.ticket dl div{display:flex;justify-content:space-between;gap:14px;border-bottom:1.5px dotted rgba(33,22,15,.5);padding-bottom:5px}
 .ticket dt{font-weight:700;flex:none}
 .ticket dd{font-weight:900;text-align:left}
-.ticket .total{border-top:3px dashed var(--ink);padding:16px 24px 22px;display:flex;justify-content:space-between;align-items:center}
-.ticket .total span{font-family:var(--head);font-size:1.3rem}
-.ticket .total b{font-family:var(--display);font-weight:400;font-size:2.6rem;line-height:1}
-.ticket .total small{font-size:1rem;font-family:var(--body);font-weight:900}
+.ticket .total{border-top:3px dashed var(--ink);padding:14px 24px 20px;display:flex;justify-content:space-between;align-items:center}
+.ticket .total>span{font-family:var(--head);font-size:1.3rem}
+.ticket .total b{font-family:var(--display);font-weight:400;font-size:2.7rem;line-height:1;color:var(--red)}
+.ticket .total small{font-size:1rem;font-family:var(--body);font-weight:900;color:var(--ink)}
 
-/* ───── كيف نشتغل ───── */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
-@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.steps{grid-template-columns:1fr}}
-.step{background:var(--paper);border:3px solid var(--ink);border-radius:14px;padding:44px 20px 22px;position:relative;box-shadow:var(--shadow);text-align:center}
-.step::before{counter-increment:s;content:counter(s);position:absolute;top:-24px;inset-inline-start:50%;transform:translateX(50%);
-  width:52px;height:52px;border-radius:50%;background:var(--red);color:var(--paper);border:3px solid var(--ink);
-  font-family:var(--display);font-size:1.8rem;display:grid;place-items:center;line-height:1}
-.step h3{font-family:var(--head);font-weight:400;font-size:1.35rem}
-.step p{color:var(--ink-soft);font-weight:500;font-size:.97rem}
+/* ───── المشاهد ───── */
+.scenes{display:grid;grid-template-columns:repeat(4,1fr);background:var(--night);padding:30px 0;border-radius:8px;position:relative;box-shadow:8px 10px 0 rgba(33,22,15,.35)}
+.scenes::before,.scenes::after{content:"";position:absolute;inset-inline:0;height:30px;
+  background-image:repeating-linear-gradient(90deg,var(--cream) 0 14px,transparent 14px 30px);background-size:auto 10px;background-repeat:repeat-x;background-position:8px 50%}
+.scenes::before{top:0}.scenes::after{bottom:0}
+.scene{background:var(--paper);margin:0 6px;padding:20px 16px 22px;text-align:center;border-radius:3px}
+.scene:first-child{margin-inline-start:12px}.scene:last-child{margin-inline-end:12px}
+.scene .latin{font-size:.72rem;color:var(--red)}
+.scene h3{font-family:var(--display);font-weight:400;font-size:1.7rem;line-height:1.2}
+.scene p{color:var(--ink-soft);font-weight:500;font-size:.96rem}
+@media(max-width:860px){.scenes{grid-template-columns:repeat(2,1fr);row-gap:12px}.scene{margin:0 6px!important}}
+@media(max-width:460px){.scenes{grid-template-columns:1fr}.scene{margin:0 12px!important}}
 
 /* ───── الأسئلة ───── */
 .faq{max-width:820px;margin-inline:auto;display:grid;gap:14px}
-details{background:var(--paper);border:3px solid var(--ink);border-radius:12px;box-shadow:4px 4px 0 var(--ink)}
+details{background:var(--paper);border-radius:10px;box-shadow:0 0 0 2px var(--ink),5px 6px 0 rgba(33,22,15,.9)}
 summary{cursor:pointer;font-family:var(--head);font-size:1.25rem;padding:12px 20px;list-style:none;display:flex;justify-content:space-between;gap:12px}
 summary::-webkit-details-marker{display:none}
 summary::after{content:"+";font-size:1.6rem;line-height:1;color:var(--red)}
 details[open] summary::after{content:"–"}
 details p{padding:0 20px 16px;color:var(--ink-soft);font-weight:500}
 
-footer{background:var(--ink);color:#e6d6b8;text-align:center;padding:34px 0 40px}
-footer .logo{justify-content:center;color:var(--paper);font-size:2rem;margin-bottom:8px}
+footer{background:var(--night);color:#e6d3b4;text-align:center;padding:46px 0 40px}
+footer .end{font-family:var(--display);font-size:clamp(3rem,9vw,5rem);color:var(--mustard);line-height:1;text-shadow:3px 3px 0 var(--red)}
+footer .latin{font-size:.8rem;color:var(--cream);margin-bottom:14px}
 footer p{font-size:.92rem}
 
 /* ───── نافذة التأكيد ───── */
-dialog{border:4px solid var(--ink);border-radius:16px;background:var(--paper);color:var(--ink);padding:0;
-  width:min(520px,calc(100% - 28px));margin:auto;box-shadow:10px 10px 0 var(--mustard)}
-dialog::backdrop{background:rgba(42,28,21,.75)}
-.dlg-head{background:var(--teal);color:var(--paper);text-align:center;padding:20px;border-bottom:4px solid var(--ink)}
+dialog{border:0;border-radius:14px;background:var(--paper);color:var(--ink);padding:0;width:min(520px,calc(100% - 28px));margin:auto;
+  box-shadow:0 0 0 3px var(--ink),0 0 0 8px var(--mustard),0 0 0 11px var(--ink)}
+dialog::backdrop{background:rgba(23,17,13,.8)}
+.dlg-head{background:var(--teal);color:#fff;text-align:center;padding:18px;border-bottom:3px solid var(--ink)}
 .dlg-head h3{font-family:var(--display);font-weight:400;font-size:2.3rem;line-height:1.1}
-.dlg-body{padding:20px 24px 24px;display:grid;gap:14px}
-.ref{text-align:center;font-family:var(--head);font-size:1.5rem;border:3px dashed var(--red);color:var(--red);border-radius:10px;padding:4px;direction:ltr}
+.dlg-body{padding:20px 24px 26px;display:grid;gap:14px}
+.ref{text-align:center;font-family:var(--latin);font-size:1.4rem;border:3px dashed var(--red);color:var(--red);border-radius:10px;padding:4px;direction:ltr;letter-spacing:.1em}
 .dlg-body ul{list-style:none;display:grid;gap:6px;font-weight:500}
 .dlg-body li b{font-weight:900}
-.dlg-btns{display:flex;gap:12px;flex-wrap:wrap}
-.dlg-btns .btn{flex:1;text-align:center;font-size:1.1rem;padding:8px 14px;min-width:150px}
+.dlg-btns{display:flex;gap:20px;flex-wrap:wrap;padding:4px}
+.dlg-btns .btn{flex:1;text-align:center;font-size:1.1rem;padding:7px 14px;min-width:150px}
 .note{font-size:.85rem;color:var(--ink-soft)}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 
 <div class="topbar">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="أيام زمان">
-      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#e2a72a" stroke="#f4e8cf" stroke-width="2"/><circle cx="20" cy="20" r="6" fill="#2a1c15"/><g stroke="#2a1c15" stroke-width="2.5"><path d="M20 3v11M20 26v11M3 20h11M26 20h11"/></g></svg>
-      <span>أيام <b>زمان</b></span>
-    </a>
+    <a class="logo" href="#top"><span class="tire" aria-hidden="true"></span><span>أيام أول</span></a>
     <nav class="nav">
       <a href="#fleet">الأسطول</a>
       <a href="#how">كيف نشتغل</a>
@@ -235,46 +269,42 @@ dialog::backdrop{background:rgba(42,28,21,.75)}
 
 <header class="hero" id="top">
   <div class="wrap">
-    <div class="ribbon">★ تأجير سيارات كلاسيكية · الكويت ★</div>
-    <h1>سُوق <span>الزمن الجميل</span></h1>
-    <p class="lead">شفروليه الخمسينات، مرسيدس الستينات، وكاديلاك بجناحينها — سيارات كلاسيكية مرتبة بالإيجار بالساعة، لزفّتك، تصويرك، أو كشخة على شارع الخليج.</p>
-    <div class="hero-btns">
-      <a class="btn" href="#fleet">شوف السيارات</a>
-      <a class="btn alt" href="#booking">احجز بالساعة</a>
+    <div>
+      <div class="marquee"><span><span class="latin">NOW SHOWING</span>يُعرض الآن في الكويت</span></div>
+      <h1>أيام أول</h1>
+      <div class="sub">تأجير السيارات الكلاسيكية — بالساعة</div>
+      <p class="lead">شفروليه الخمسينات، مرسيدس الستينات، وكاديلاك بجناحينها. اركب سيارة من أيام أول لزفّتك، تصويرك، أو كشخة على شارع الخليج.</p>
+      <div class="hero-btns">
+        <a class="btn" href="#booking">احجز بالساعة</a>
+        <a class="btn amber" href="#fleet">شوف السيارات</a>
+      </div>
+      <div class="billing">بطولة &nbsp;<b>شفروليه بيل إير</b> · <b>مرسيدس بنز باغودا</b> · <b>كاديلاك إلدورادو</b><br>أقل مدة 3 ساعات · التسليم بنفس موقع الاستلام</div>
     </div>
-    <svg class="hero-car" viewBox="0 0 760 230" role="img" aria-label="رسمة سيارة كلاسيكية">
-      <g stroke="#2a1c15" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
-        <path d="M40 160 C40 128 70 120 120 116 L215 108 C250 62 300 50 380 50 L455 50 C505 50 540 76 566 108 L660 112 C705 114 728 128 730 150 L742 150 L742 172 L40 172 Z" fill="#1d6b67"/>
-        <path d="M238 108 C266 74 304 66 372 66 L372 108 Z" fill="#cfe6e2"/>
-        <path d="M390 66 L452 66 C492 66 520 84 540 108 L390 108 Z" fill="#cfe6e2"/>
-        <path d="M40 160 L742 160" stroke="#f4e8cf" stroke-width="6"/>
-        <path d="M660 112 L748 92 L742 128" fill="#1d6b67"/>
-        <rect x="18" y="160" width="60" height="16" rx="8" fill="#f4e8cf"/>
-        <rect x="700" y="160" width="52" height="16" rx="8" fill="#f4e8cf"/>
-        <circle cx="62" cy="140" r="11" fill="#e2a72a"/>
-        <path d="M381 110 L381 158 M300 132 h26 M440 132 h26" fill="none"/>
-        <g><circle cx="182" cy="176" r="44" fill="#2a1c15"/><circle cx="182" cy="176" r="29" fill="#f4e8cf"/><circle cx="182" cy="176" r="15" fill="#e2a72a"/></g>
-        <g><circle cx="596" cy="176" r="44" fill="#2a1c15"/><circle cx="596" cy="176" r="29" fill="#f4e8cf"/><circle cx="596" cy="176" r="15" fill="#e2a72a"/></g>
-      </g>
-    </svg>
+    <div class="screen">
+      <figure>
+        <img src="images/hero.jpg" alt="شفروليه بيل إير ومرسيدس باغودا على الكورنيش وقت الغروب" onerror="this.style.visibility='hidden'">
+        <figcaption><span>سينما السيارات</span><span class="latin">DRIVE-IN · KUWAIT</span></figcaption>
+      </figure>
+    </div>
   </div>
-  <div class="road"></div>
 </header>
+<div class="grille" aria-hidden="true"></div>
 
-<div class="rules">
+<div class="dash">
   <div class="wrap">
-    <div class="rule"><div class="big">3</div><h3>ساعات أقل مدة</h3><p>أقل حجز ثلاث ساعات، وتزيد على كيفك.</p></div>
-    <div class="rule"><div class="big">⏱</div><h3>الحساب بالساعة</h3><p>تدفع على عدد الساعات، بدون رسوم مخفية.</p></div>
-    <div class="rule"><div class="big">⇄</div><h3>نفس الموقع</h3><p>ترجّع السيارة بنفس الفرع اللي استلمتها منه.</p></div>
-    <div class="rule"><div class="big">★</div><h3>سيارات مرتبة</h3><p>مرمّمة، مصبوغة، ومفحوصة قبل كل طلعة.</p></div>
+    <div class="gauge"><div class="dial"><i style="--n:-95deg"><b>3</b></i></div><h3>ساعات أقل مدة</h3><p>أقل حجز ثلاث ساعات، وتزيد على كيفك.</p></div>
+    <div class="gauge"><div class="dial"><i style="--n:-30deg"><b>⏱</b></i></div><h3>الحساب بالساعة</h3><p>تدفع على عدد الساعات، بدون رسوم مخفية.</p></div>
+    <div class="gauge"><div class="dial"><i style="--n:35deg"><b>⇄</b></i></div><h3>نفس الموقع</h3><p>ترجّع السيارة بنفس الفرع اللي استلمتها منه.</p></div>
+    <div class="gauge"><div class="dial"><i style="--n:110deg"><b>★</b></i></div><h3>سيارات مرتبة</h3><p>مرمّمة، مصبوغة، ومفحوصة قبل كل طلعة.</p></div>
   </div>
 </div>
+<div class="film" aria-hidden="true"></div>
 
-<section id="fleet">
+<section id="fleet" class="papered">
   <div class="wrap">
     <div class="sec-head">
-      <div class="kicker">الأسطول</div>
-      <h2>اختر سيارتك</h2>
+      <div class="kicker latin">THE CAST</div>
+      <h2>نجوم العرض</h2>
       <p>قول لنا وش المناسبة ونرشّح لك الأنسب، أو تصفّح حسب الماركة.</p>
     </div>
     <div class="filters">
@@ -285,14 +315,14 @@ dialog::backdrop{background:rgba(42,28,21,.75)}
   </div>
 </section>
 
-<div class="checker"></div>
+<div class="grille" aria-hidden="true"></div>
 
 <section id="booking">
   <div class="wrap">
     <div class="sec-head">
-      <div class="kicker">الحجز</div>
-      <h2>احجز بالساعة</h2>
-      <p>أقل مدة للإيجار 3 ساعات. تسليم السيارة يكون في نفس الفرع اللي استلمتها منه.</p>
+      <div class="kicker latin">BOX OFFICE</div>
+      <h2>شبّاك التذاكر</h2>
+      <p>الإيجار بالساعة وأقل مدة 3 ساعات. تسليم السيارة يكون في نفس الفرع اللي استلمتها منه.</p>
     </div>
     <div class="book">
       <form id="form" novalidate>
@@ -323,10 +353,10 @@ dialog::backdrop{background:rgba(42,28,21,.75)}
         </div>
         <div class="f full">
           <span class="label" id="hoursLbl">عدد الساعات</span>
-          <div class="stepper" role="group" aria-labelledby="hoursLbl">
-            <button type="button" id="minus" aria-label="نقّص ساعة">−</button>
-            <output id="hoursOut" aria-live="polite">3 ساعات</output>
+          <div class="odo" role="group" aria-labelledby="hoursLbl">
             <button type="button" id="plus" aria-label="زوّد ساعة">+</button>
+            <output id="hoursOut" aria-live="polite"></output>
+            <button type="button" id="minus" aria-label="نقّص ساعة">−</button>
           </div>
           <div class="hint">أقل مدة 3 ساعات · أقصى مدة 24 ساعة للحجز الواحد.</div>
         </div>
@@ -340,11 +370,11 @@ dialog::backdrop{background:rgba(42,28,21,.75)}
           <input type="tel" id="phone" inputmode="numeric" autocomplete="tel-national" placeholder="5XXXXXXX" maxlength="8" required>
           <div class="err"></div>
         </div>
-        <div class="f full"><button class="btn teal" type="submit">أكّد الحجز</button></div>
+        <div class="f full" style="padding:6px"><button class="btn teal" type="submit">أكّد الحجز</button></div>
       </form>
 
       <aside class="ticket" aria-label="ملخص الحجز">
-        <header><span>BOARDING · PASS</span><h3>تذكرة الطلعة</h3></header>
+        <header><span class="latin">ADMIT ONE</span><h3>تذكرة الطلعة</h3></header>
         <dl>
           <div><dt>السيارة</dt><dd id="sCar">—</dd></div>
           <div><dt>سعر الساعة</dt><dd id="sRate">—</dd></div>
@@ -359,23 +389,25 @@ dialog::backdrop{background:rgba(42,28,21,.75)}
   </div>
 </section>
 
-<section id="how">
+<div class="film" aria-hidden="true"></div>
+
+<section id="how" class="papered">
   <div class="wrap">
-    <div class="sec-head"><div class="kicker">الطريقة</div><h2>كيف نشتغل</h2></div>
-    <div class="steps">
-      <div class="step"><h3>اختر السيارة</h3><p>تصفّح الأسطول واختر اللي تناسب مناسبتك.</p></div>
-      <div class="step"><h3>حدّد الوقت</h3><p>اختر الفرع والتاريخ وعدد الساعات — من 3 ساعات وفوق.</p></div>
-      <div class="step"><h3>استلم وانطلق</h3><p>تعال الفرع، نسلّمك السيارة نظيفة ومفحوصة.</p></div>
-      <div class="step"><h3>رجّعها بنفس الفرع</h3><p>بنهاية المدة ترجّعها لنفس المكان وخلاص.</p></div>
+    <div class="sec-head"><div class="kicker latin">THE STORY</div><h2>القصة في أربع مشاهد</h2></div>
+    <div class="scenes">
+      <div class="scene"><div class="latin">SCENE 1</div><h3>اختر السيارة</h3><p>تصفّح النجوم واختر اللي تناسب مناسبتك.</p></div>
+      <div class="scene"><div class="latin">SCENE 2</div><h3>حدّد الوقت</h3><p>الفرع والتاريخ وعدد الساعات — من 3 ساعات وفوق.</p></div>
+      <div class="scene"><div class="latin">SCENE 3</div><h3>استلم وانطلق</h3><p>تعال الفرع، نسلّمك السيارة نظيفة ومفحوصة.</p></div>
+      <div class="scene"><div class="latin">SCENE 4</div><h3>رجّعها بنفس الفرع</h3><p>بنهاية المدة ترجّعها لنفس المكان وخلاص.</p></div>
     </div>
   </div>
 </section>
 
-<div class="checker"></div>
+<div class="grille" aria-hidden="true"></div>
 
-<section id="faq">
+<section id="faq" class="papered">
   <div class="wrap">
-    <div class="sec-head"><div class="kicker">استفسارات</div><h2>أسئلة متكررة</h2></div>
+    <div class="sec-head"><div class="kicker latin">Q &amp; A</div><h2>أسئلة متكررة</h2></div>
     <div class="faq">
       <details open><summary>كم أقل مدة للإيجار؟</summary><p>أقل مدة 3 ساعات. تقدر تزيد ساعات على كيفك، والحساب على كل ساعة.</p></details>
       <details><summary>وين أرجّع السيارة؟</summary><p>التسليم يكون في نفس الفرع اللي استلمت منه السيارة، وما نقدر نستلمها بفرع ثاني.</p></details>
@@ -387,9 +419,10 @@ dialog::backdrop{background:rgba(42,28,21,.75)}
 
 <footer>
   <div class="wrap">
-    <div class="logo"><span>أيام <b>زمان</b></span></div>
-    <p>تأجير السيارات الكلاسيكية بالساعة · الكويت</p>
-    <p class="note" style="color:#bfae90;margin-top:8px">الصور من ويكيميديا كومنز برخص حرة — اسم المصوّر والرخصة تحت كل صورة.</p>
+    <div class="end">النهاية</div>
+    <div class="latin">THE END</div>
+    <p>أيام أول · تأجير السيارات الكلاسيكية بالساعة · الكويت</p>
+    <p class="note" style="color:#bfae90;margin-top:8px">الصور توضيحية.</p>
   </div>
 </footer>
 
@@ -401,7 +434,7 @@ dialog::backdrop{background:rgba(42,28,21,.75)}
     <p class="note">اضغط «أرسل بالواتساب» عشان يوصلنا طلبك ونأكّد لك الحجز.</p>
     <div class="dlg-btns">
       <a class="btn teal" id="dWa" target="_blank" rel="noopener">أرسل بالواتساب</a>
-      <button class="btn alt" type="button" id="dClose">إغلاق</button>
+      <button class="btn amber" type="button" id="dClose">إغلاق</button>
     </div>
   </div>
 </dialog>
@@ -422,207 +455,25 @@ const OCCASIONS = [
   { id: "event",   label: "🎩 مناسبة رسمية" }
 ];
 
-/* الأسعار بالدينار الكويتي لكل ساعة — عدّلها على كيفك */
+/* الأسعار بالدينار الكويتي لكل ساعة — عدّلها على كيفك. الصور في مجلد images */
 const CARS = [
-  {
-    "id": "belair",
-    "name": "شفروليه بيل إير",
-    "en": "Chevrolet Bel Air Sport Coupe",
-    "year": 1957,
-    "brand": "شفروليه",
-    "rate": 18,
-    "seats": 5,
-    "gear": "أوتوماتيك",
-    "body": "كوبيه",
-    "color": "#1d6b67",
-    "tags": [
-      "wedding",
-      "photo",
-      "cruise"
-    ],
-    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/1957_Chevrolet_Bel_Air_Sport_Coupe_P5200937.jpg/960px-1957_Chevrolet_Bel_Air_Sport_Coupe_P5200937.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:1957_Chevrolet_Bel_Air_Sport_Coupe_P5200937.jpg",
-    "credit": "Ermell",
-    "license": "CC BY-SA 4.0"
-  },
-  {
-    "id": "impala",
-    "name": "شفروليه إمبالا",
-    "en": "Chevrolet Impala Sport Coupe",
-    "year": 1964,
-    "brand": "شفروليه",
-    "rate": 16,
-    "seats": 6,
-    "gear": "أوتوماتيك",
-    "body": "كوبيه",
-    "color": "#9a2f24",
-    "tags": [
-      "cruise",
-      "photo"
-    ],
-    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/1964_Chevrolet_Impala_Sport_Coupe%2C_front_right%2C_09-30-2023.jpg/960px-1964_Chevrolet_Impala_Sport_Coupe%2C_front_right%2C_09-30-2023.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:1964_Chevrolet_Impala_Sport_Coupe,_front_right,_09-30-2023.jpg",
-    "credit": "MercurySable99",
-    "license": "CC BY-SA 4.0"
-  },
-  {
-    "id": "corvette",
-    "name": "شفروليه كورفيت C1",
-    "en": "Chevrolet Corvette C1",
-    "year": 1960,
-    "brand": "شفروليه",
-    "rate": 25,
-    "seats": 2,
-    "gear": "عادي",
-    "body": "مكشوفة",
-    "color": "#9a2f24",
-    "tags": [
-      "photo",
-      "cruise"
-    ],
-    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Corvette_C1_1960.jpg/960px-Corvette_C1_1960.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Corvette_C1_1960.jpg",
-    "credit": "Palauenc05",
-    "license": "CC BY-SA 4.0"
-  },
-  {
-    "id": "190sl",
-    "name": "مرسيدس بنز 190 SL",
-    "en": "Mercedes-Benz 190 SL Roadster",
-    "year": 1959,
-    "brand": "مرسيدس بنز",
-    "rate": 28,
-    "seats": 2,
-    "gear": "عادي",
-    "body": "رودستر مكشوفة",
-    "color": "#b9b3a4",
-    "tags": [
-      "wedding",
-      "photo"
-    ],
-    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Mercedes-Benz_190_SL_Roadster_%282017-07-02_Sp%29.JPG/960px-Mercedes-Benz_190_SL_Roadster_%282017-07-02_Sp%29.JPG",
-    "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_190_SL_Roadster_(2017-07-02_Sp).JPG",
-    "credit": "Lothar Spurzem",
-    "license": "CC BY-SA 2.0 de"
-  },
-  {
-    "id": "pagoda",
-    "name": "مرسيدس بنز 280 SL «باغودا»",
-    "en": "Mercedes-Benz 280 SL (W113)",
-    "year": 1969,
-    "brand": "مرسيدس بنز",
-    "rate": 26,
-    "seats": 2,
-    "gear": "أوتوماتيك",
-    "body": "مكشوفة",
-    "color": "#e2a72a",
-    "tags": [
-      "wedding",
-      "photo",
-      "cruise"
-    ],
-    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Mercedes-Benz_280_SL_W_113_%282013-05-04%29_in_Wei%C3%9Fenthurm_r.jpg/960px-Mercedes-Benz_280_SL_W_113_%282013-05-04%29_in_Wei%C3%9Fenthurm_r.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_280_SL_W_113_(2013-05-04)_in_Wei%C3%9Fenthurm_r.jpg",
-    "credit": "Lothar Spurzem",
-    "license": "CC BY-SA 2.0 de"
-  },
-  {
-    "id": "cadillac",
-    "name": "كاديلاك إلدورادو",
-    "en": "Cadillac Eldorado Biarritz",
-    "year": 1959,
-    "brand": "كاديلاك",
-    "rate": 30,
-    "seats": 6,
-    "gear": "أوتوماتيك",
-    "body": "مكشوفة",
-    "color": "#c75a6a",
-    "tags": [
-      "wedding",
-      "event",
-      "photo"
-    ],
-    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/1959_Cadillac_Eldorado_Biarritz.jpg/960px-1959_Cadillac_Eldorado_Biarritz.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:1959_Cadillac_Eldorado_Biarritz.jpg",
-    "credit": "MrWalkr",
-    "license": "CC BY-SA 4.0"
-  },
-  {
-    "id": "rolls",
-    "name": "رولز رويس سيلفر كلاود",
-    "en": "Rolls-Royce Silver Cloud III",
-    "year": 1964,
-    "brand": "رولز رويس",
-    "rate": 40,
-    "seats": 5,
-    "gear": "أوتوماتيك",
-    "body": "صالون",
-    "color": "#5b463a",
-    "tags": [
-      "wedding",
-      "event"
-    ],
-    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Rolls-Royce_Silver_Cloud_III%2C_Bj._1964_%28ret%29.jpg/960px-Rolls-Royce_Silver_Cloud_III%2C_Bj._1964_%28ret%29.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Rolls-Royce_Silver_Cloud_III,_Bj._1964_(ret).jpg",
-    "credit": "Lothar Spurzem",
-    "license": "CC BY-SA 2.0 de"
-  },
-  {
-    "id": "mustang",
-    "name": "فورد موستانج",
-    "en": "Ford Mustang Convertible",
-    "year": 1965,
-    "brand": "فورد",
-    "rate": 15,
-    "seats": 4,
-    "gear": "أوتوماتيك",
-    "body": "مكشوفة",
-    "color": "#124b48",
-    "tags": [
-      "cruise",
-      "photo"
-    ],
-    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/1965_Ford_Mustang_base_convertible.jpg/960px-1965_Ford_Mustang_base_convertible.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:1965_Ford_Mustang_base_convertible.jpg",
-    "credit": "MercurySable99",
-    "license": "CC BY-SA 4.0"
-  },
-  {
-    "id": "etype",
-    "name": "جاكوار إي-تايب",
-    "en": "Jaguar E-Type Series 1",
-    "year": 1967,
-    "brand": "جاكوار",
-    "rate": 27,
-    "seats": 2,
-    "gear": "عادي",
-    "body": "رودستر",
-    "color": "#7a2119",
-    "tags": [
-      "photo",
-      "event",
-      "cruise"
-    ],
-    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Jaguar_E-Type_Series_1_4.2_Litre_1967.jpg/960px-Jaguar_E-Type_Series_1_4.2_Litre_1967.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Jaguar_E-Type_Series_1_4.2_Litre_1967.jpg",
-    "credit": "DeFacto",
-    "license": "CC BY-SA 4.0"
-  }
+  { id: "belair",   name: "شفروليه بيل إير",   en: "Chevrolet Bel Air",        year: 1957, brand: "شفروليه",    rate: 18, seats: 5, gear: "أوتوماتيك", body: "كوبيه",   tagline: "نجمة الخمسينات بلا منازع",        tags: ["wedding", "photo", "cruise"] },
+  { id: "impala",   name: "شفروليه إمبالا",    en: "Chevrolet Impala",         year: 1964, brand: "شفروليه",    rate: 16, seats: 6, gear: "أوتوماتيك", body: "كوبيه",   tagline: "طويلة، واطية، وكلها هيبة",        tags: ["cruise", "photo"] },
+  { id: "corvette", name: "شفروليه كورفيت",    en: "Chevrolet Corvette C1",    year: 1960, brand: "شفروليه",    rate: 25, seats: 2, gear: "عادي",      body: "مكشوفة",  tagline: "الرياضية الأمريكية الأولى",        tags: ["photo", "cruise"] },
+  { id: "190sl",    name: "مرسيدس 190 SL",     en: "Mercedes-Benz 190 SL",     year: 1959, brand: "مرسيدس بنز", rate: 28, seats: 2, gear: "عادي",      body: "رودستر",  tagline: "أناقة ألمانية مكشوفة",            tags: ["wedding", "photo"] },
+  { id: "pagoda",   name: "مرسيدس «باغودا»",   en: "Mercedes-Benz 280 SL",     year: 1969, brand: "مرسيدس بنز", rate: 26, seats: 2, gear: "أوتوماتيك", body: "مكشوفة",  tagline: "حلم الستينات على أربع كفرات",      tags: ["wedding", "photo", "cruise"] },
+  { id: "cadillac", name: "كاديلاك إلدورادو",  en: "Cadillac Eldorado Biarritz", year: 1959, brand: "كاديلاك",  rate: 30, seats: 6, gear: "أوتوماتيك", body: "مكشوفة",  tagline: "جناحين وردية وكروم لآخر الشارع",   tags: ["wedding", "event", "photo"] },
+  { id: "rolls",    name: "رولز رويس سيلفر كلاود", en: "Rolls-Royce Silver Cloud III", year: 1964, brand: "رولز رويس", rate: 40, seats: 5, gear: "أوتوماتيك", body: "صالون", tagline: "فخامة ما تحتاج تعريف",        tags: ["wedding", "event"] },
+  { id: "mustang",  name: "فورد موستانج",      en: "Ford Mustang Convertible", year: 1965, brand: "فورد",       rate: 15, seats: 4, gear: "أوتوماتيك", body: "مكشوفة",  tagline: "الحصان اللي غيّر اللعبة",          tags: ["cruise", "photo"] },
+  { id: "etype",    name: "جاكوار إي-تايب",    en: "Jaguar E-Type Series 1",   year: 1967, brand: "جاكوار",     rate: 27, seats: 2, gear: "عادي",      body: "رودستر",  tagline: "يقولون أجمل سيارة انصنعت",         tags: ["photo", "event", "cruise"] }
 ];
 
 /* ═══════ أدوات ═══════ */
 const $ = s => document.querySelector(s);
-const kwd = n => Number(n).toLocaleString("en", { minimumFractionDigits: 0, maximumFractionDigits: 3 });
+const kwd = n => Number(n).toLocaleString("en", { maximumFractionDigits: 3 });
 const hoursWord = h => h + (h >= 3 && h <= 10 ? " ساعات" : " ساعة");
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const fmt = d => new Intl.DateTimeFormat("ar-KW-u-nu-latn", { weekday: "short", day: "numeric", month: "short", hour: "numeric", minute: "2-digit" }).format(d);
-
-const placeholderSVG = color => `
-<div class="ph"><svg viewBox="0 0 760 230" aria-hidden="true"><g stroke="#2a1c15" stroke-width="6" stroke-linejoin="round">
-<path d="M40 160C40 128 70 120 120 116L215 108C250 62 300 50 380 50L455 50C505 50 540 76 566 108L660 112C705 114 728 128 730 150L742 150 742 172 40 172Z" fill="${color}"/>
-<path d="M238 108C266 74 304 66 372 66L372 108ZM390 66 452 66C492 66 520 84 540 108L390 108Z" fill="#cfe6e2"/>
-<circle cx="182" cy="176" r="44" fill="#2a1c15"/><circle cx="182" cy="176" r="24" fill="#f4e8cf"/>
-<circle cx="596" cy="176" r="44" fill="#2a1c15"/><circle cx="596" cy="176" r="24" fill="#f4e8cf"/></g></svg></div>`;
 
 /* ═══════ الأسطول ═══════ */
 const grid = $("#grid");
@@ -630,28 +481,26 @@ let activeBrand = "all", activeOcc = null;
 
 function renderCars() {
   grid.innerHTML = CARS.map(c => `
-    <article class="card" data-id="${c.id}" data-brand="${esc(c.brand)}">
+    <article class="card" data-id="${c.id}">
       <div class="photo">
-        <span class="year">${c.year}</span><span class="pick">★ نرشّحها لك</span>
-        ${c.img ? `<img src="${esc(c.img)}" alt="${esc(c.name)} موديل ${c.year}" loading="lazy" referrerpolicy="no-referrer" data-color="${c.color}">` : placeholderSVG(c.color)}
+        <span class="plate">${c.year}</span><span class="pick">★ نرشّحها لك</span>
+        <img src="images/${c.id}.jpg" alt="${esc(c.name)} موديل ${c.year}" loading="lazy" width="720" height="480">
       </div>
       <div class="body">
-        <div>
-          <div class="brand">${esc(c.brand)}</div>
-          <h3>${esc(c.name)}</h3>
-          <div class="en">${esc(c.en)}</div>
-        </div>
+        <div class="brand">${esc(c.brand)}</div>
+        <h3>${esc(c.name)}</h3>
+        <div class="en">${esc(c.en)}</div>
+        <div class="tagline">«${esc(c.tagline)}»</div>
         <ul class="specs"><li>${c.seats} ركّاب</li><li>${esc(c.gear)}</li><li>${esc(c.body)}</li></ul>
-        <div class="price-row">
-          <div class="price"><b>${kwd(c.rate)}</b> <small style="display:inline">د.ك / ساعة</small>
-            <span class="min" style="display:block">من ${kwd(c.rate * CONFIG.minHours)} د.ك لأقل مدة (${CONFIG.minHours} ساعات)</span></div>
+        <div class="stub">
+          <div class="price"><b>${kwd(c.rate)}</b> <span>د.ك / ساعة</span>
+            <span class="min">أقل حجز ${CONFIG.minHours} ساعات = ${kwd(c.rate * CONFIG.minHours)} د.ك</span></div>
           <button class="btn" type="button" data-book="${c.id}">احجزها</button>
         </div>
-        ${c.credit ? `<div class="credit">Photo: <a href="${esc(c.page)}" target="_blank" rel="noopener">${esc(c.credit)}</a> · ${esc(c.license)}</div>` : ""}
       </div>
     </article>`).join("");
   grid.querySelectorAll("img").forEach(img => img.addEventListener("error", () => {
-    img.insertAdjacentHTML("afterend", placeholderSVG(img.dataset.color)); img.remove();
+    const ph = document.createElement("div"); ph.className = "ph"; ph.textContent = img.alt; img.replaceWith(ph);
   }));
 }
 
@@ -662,7 +511,6 @@ function applyFilters() {
     el.classList.toggle("hide", activeBrand !== "all" && c.brand !== activeBrand);
     el.classList.toggle("rec", !!activeOcc && c.tags.includes(activeOcc));
   });
-  // المرشّحة أول
   cards.sort((a, b) => b.classList.contains("rec") - a.classList.contains("rec") ||
     CARS.findIndex(x => x.id === a.dataset.id) - CARS.findIndex(x => x.id === b.dataset.id))
     .forEach(el => grid.appendChild(el));
@@ -702,7 +550,9 @@ function startDate() {
 function updateSummary() {
   const c = CARS.find(x => x.id === els.car.value);
   const s = startDate();
-  $("#hoursOut").textContent = hoursWord(hours);
+  const [d1, d2] = pad(hours);
+  $("#hoursOut").innerHTML = `<span class="d" aria-hidden="true">${d1}</span><span class="d" aria-hidden="true">${d2}</span><span class="u">${hoursWord(hours).replace(/^\d+ /, "")}</span>`;
+  $("#hoursOut").setAttribute("aria-label", hoursWord(hours));
   $("#minus").disabled = hours <= CONFIG.minHours;
   $("#plus").disabled = hours >= CONFIG.maxHours;
   $("#sCar").textContent = c ? `${c.name} ${c.year}` : "—";
@@ -758,13 +608,13 @@ function initBooking() {
     if (!validate()) return;
     const c = CARS.find(x => x.id === els.car.value), s = startDate(), e = new Date(s.getTime() + hours * 36e5);
     const booking = {
-      ref: "AZ-" + Date.now().toString(36).toUpperCase().slice(-6),
+      ref: "AA-" + Date.now().toString(36).toUpperCase().slice(-6),
       car: `${c.name} ${c.year}`, branch: els.branch.value, start: s.toISOString(), end: e.toISOString(),
       hours, rate: c.rate, total: c.rate * hours, name: els.name.value.trim(), phone: els.phone.value.trim()
     };
     try {
-      const all = JSON.parse(localStorage.getItem("az-bookings") || "[]"); all.push(booking);
-      localStorage.setItem("az-bookings", JSON.stringify(all));
+      const all = JSON.parse(localStorage.getItem("ayam-awal-bookings") || "[]"); all.push(booking);
+      localStorage.setItem("ayam-awal-bookings", JSON.stringify(all));
     } catch (_) {}
     const rows = [
       ["السيارة", booking.car], ["الاستلام", fmt(s)], ["التسليم", fmt(e)],
@@ -773,7 +623,7 @@ function initBooking() {
     ];
     $("#dRef").textContent = booking.ref;
     $("#dList").innerHTML = rows.map(([k, v]) => `<li><b>${k}:</b> ${esc(v)}</li>`).join("");
-    const text = `طلب حجز سيارة كلاسيكية\nرقم الطلب: ${booking.ref}\n` + rows.map(([k, v]) => `${k}: ${v}`).join("\n");
+    const text = `طلب حجز سيارة كلاسيكية — أيام أول\nرقم الطلب: ${booking.ref}\n` + rows.map(([k, v]) => `${k}: ${v}`).join("\n");
     $("#dWa").href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`;
     $("#dlg").showModal();
   });
